@@ -1,0 +1,1 @@
+<?php echo @$body; ?><?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/capstone2/resources/views/backEnd/email/emailBody.blade.php ENDPATH**/ ?>
