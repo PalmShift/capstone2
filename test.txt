@@ -1,0 +1,2411 @@
+831 results - 201 files
+
+server.php:
+  15  // built-in PHP web server. This provides a convenient way to test a Laravel
+  16: // application without having installed a "real" web server software here.
+  17  if ($uri !== '/' && file_exists(__DIR__.$uri)) {
+
+app/Http/Controllers/Admin/SystemSettings/SmAddOnsController.php:
+  105              $s->update_url = $url;
+  106:             $s->installed_domain = url('/');
+  107              $s->activated_date = date('Y-m-d');
+
+  293                          $s->update_url = $url;
+  294:                         $s->installed_domain = url('/');
+  295                          $s->activated_date = date('Y-m-d');
+
+  362                      $s->update_url = $url;
+  363:                     $s->installed_domain = url('/');
+  364                      $s->activated_date = date('Y-m-d');
+
+  436              $s->update_url = $url;
+  437:             $s->installed_domain = url('/');
+  438              $s->activated_date = date('Y-m-d');
+
+app/Http/Middleware/CheckMaintenanceMode.php:
+  32      {
+  33:         $c = Storage::exists('.app_installed') ? Storage::get('.app_installed') : false;
+  34          if (!$c) {
+
+app/Http/Middleware/Localization.php:
+  26         
+  27:         if (Storage::exists('.app_installed') and Storage::get('.app_installed')) {
+  28              App::setLocale(getUserLanguage());
+  29              Cache::forget('translations');
+  30:             if (Storage::exists('.app_installed') && Storage::get('.app_installed') && DB::connection()->getDatabaseName() != '') {
+  31                  if (Schema::hasTable('sm_languages')) {
+
+app/Providers/AppServiceProvider.php:
+  92  
+  93:             if(Storage::exists('.app_installed') && Storage::get('.app_installed')){
+  94                  config(['broadcasting.default' => saasEnv('chatting_method')]);
+
+config/database.php:
+  29      | so make sure you have the driver for your particular database of
+  30:     | choice installed on your machine before you begin development.
+  31      |
+
+config/modules.php:
+  200      | required parameter is 'class'.
+  201:     | The file activator will store the activation status in storage/installed_modules
+  202      */
+
+  206              'statuses-file' => base_path('modules_statuses.json'),
+  207:             'cache-key' => 'activator.installed',
+  208              'cache-lifetime' => 604800,
+
+database/migrations/2020_06_10_193309_create_infix_module_managers_table.php:
+   27              $table->string('checksum', 200)->nullable();
+   28:             $table->string('installed_domain', 200)->nullable();
+   29              $table->boolean('is_default')->default(0);
+
+   54              $s->purchase_code = time();
+   55:             $s->installed_domain = url('/');
+   56              $s->activated_date = date('Y-m-d');
+
+   77              $s->purchase_code = time();
+   78:             $s->installed_domain = url('/');
+   79              $s->activated_date = date('Y-m-d');
+
+  101              $s->purchase_code = time();
+  102:             $s->installed_domain = url('/');
+  103              $s->activated_date = date('Y-m-d');
+
+  124              $s->purchase_code = time();
+  125:             $s->installed_domain = url('/');
+  126              $s->activated_date = date('Y-m-d');
+
+  147              $s->purchase_code = time();
+  148:             $s->installed_domain = url('/');
+  149              $s->activated_date = date('Y-m-d');
+
+  170              $s->purchase_code = time();
+  171:             $s->installed_domain = url('/');
+  172              $s->activated_date = date('Y-m-d');
+
+  192              $s->purchase_code = time();
+  193:             $s->installed_domain = url('/');
+  194              $s->activated_date = date('Y-m-d');
+
+  207              $s->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+  208:             $s->installed_domain = url('/');
+  209              $s->activated_date = date('Y-m-d');
+
+  221              $s->addon_url = "mailto:support@spondonit.com";
+  222:             $s->installed_domain = url('/');
+  223              $s->activated_date = date('Y-m-d');
+
+  235              $s->addon_url = 'https://aorasoft.com';
+  236:             $s->installed_domain = url('/');
+  237              $s->activated_date = date('Y-m-d');
+
+  251              $s->addon_url = "https://codecanyon.net/item/razorpay-payment-gateway-for-infixedu/27721206?s_rank=11";
+  252:             $s->installed_domain = url('/');
+  253              $s->activated_date = date('Y-m-d');
+
+  265              $s->addon_url = "mailto:support@spondonit.com";
+  266:             $s->installed_domain = url('/');
+  267              $s->activated_date = date('Y-m-d');
+
+  280              $s->addon_url = "mailto:support@spondonit.com";
+  281:             $s->installed_domain = url('/');
+  282              $s->activated_date = date('Y-m-d');
+
+  295              $s->addon_url = "mailto:support@spondonit.com";
+  296:             $s->installed_domain = url('/');
+  297              $s->activated_date = date('Y-m-d');
+
+  310              $bulk_print->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+  311:             $bulk_print->installed_domain = url('/');
+  312              $bulk_print->activated_date = date('Y-m-d');
+
+  324              $HimalayaSms->addon_url = "mailto:support@spondonit.com";
+  325:             $HimalayaSms->installed_domain = url('/');
+  326              $HimalayaSms->activated_date = date('Y-m-d');
+
+  338              $XenditPayment->addon_url = "mailto:support@spondonit.com";
+  339:             $XenditPayment->installed_domain = url('/');
+  340              $XenditPayment->activated_date = date('Y-m-d');
+
+  352               $XenditPayment->addon_url = "mailto:support@spondonit.com";
+  353:              $XenditPayment->installed_domain = url('/');
+  354               $XenditPayment->activated_date = date('Y-m-d');
+
+  365              $s->purchase_code = null;
+  366:             $s->installed_domain = null;
+  367              $s->activated_date = null;
+
+  378              $s->addon_url = "mailto:support@spondonit.com";
+  379:             $s->installed_domain = url('/');
+  380              $s->activated_date = date('Y-m-d');
+
+  400              $s->purchase_code = time();
+  401:             $s->installed_domain = url('/');
+  402              $s->activated_date = date('Y-m-d');
+
+  422              $s->purchase_code = time();
+  423:             $s->installed_domain = url('/');
+  424              $s->activated_date = date('Y-m-d');
+
+  435              $s->purchase_code = time();
+  436:             $s->installed_domain = url('/');
+  437              $s->activated_date = date('Y-m-d');
+
+  448              $s->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+  449:             $s->installed_domain = url('/');
+  450              $s->activated_date = date('Y-m-d');
+
+  461               $s->addon_url = "https://codecanyon.net/item/google-meet-module-for-infixedu-gmeet-live-class/42463761";
+  462:              $s->installed_domain = url('/');
+  463               $s->activated_date = date('Y-m-d');
+
+  475               $s->addon_url = "https://spondonit.com/contact";
+  476:              $s->installed_domain = url('/');
+  477               $s->activated_date = date('Y-m-d');
+
+  489              $s->addon_url = "https://codecanyon.net/item/google-meet-module-for-infixedu-gmeet-live-class/42463761";
+  490:             $s->installed_domain = url('/');
+  491              $s->activated_date = date('Y-m-d');
+
+  503              $s->addon_url = "https://codecanyon.net/item/google-meet-module-for-infixedu-gmeet-live-class/42463761";
+  504:             $s->installed_domain = url('/');
+  505              $s->activated_date = date('Y-m-d');
+
+  517              //  $s->addon_url = "https://codecanyon.net/item/google-meet-module-for-infixedu-gmeet-live-class/42463761";
+  518:             //  $s->installed_domain = url('/');
+  519              //  $s->activated_date = date('Y-m-d');
+
+  532              $s->addon_url = "https://codecanyon.net/item/google-meet-module-for-infixedu-gmeet-live-class/42463761";
+  533:             $s->installed_domain = url('/');
+  534              $s->activated_date = date('Y-m-d');
+
+  547              $s->addon_url = "mailto:support@spondonit.com";
+  548:             $s->installed_domain = url('/');
+  549              $s->activated_date = date('Y-m-d');
+
+  560              $s->addon_url = "maito:support@spondonit.com";
+  561:             $s->installed_domain = url('/');
+  562              $s->activated_date = date('Y-m-d');
+
+  573              $s->addon_url = "maito:support@spondonit.com";
+  574:             $s->installed_domain = url('/');
+  575              $s->activated_date = date('Y-m-d');
+
+  586              $s->addon_url = "maito:support@spondonit.com";
+  587:             $s->installed_domain = url('/');
+  588              $s->activated_date = date('Y-m-d');
+
+  600              $s->purchase_code = null;
+  601:             $s->installed_domain = null;
+  602              $s->activated_date = null;
+
+  613              $s->addon_url = "maito:support@spondonit.com";
+  614:             $s->installed_domain = url('/');
+  615              $s->activated_date = date('Y-m-d');
+
+database/migrations/2022_05_15_065010_add_marcado_pago_to_modules_table.php:
+  24              $s->addon_url = "https://spondonit.com/contact";
+  25:             $s->installed_domain = url('/');
+  26              $s->activated_date = date('Y-m-d');
+
+database/migrations/2022_05_15_071522_create_direct_fees_settings_table.php:
+  54                  $s->is_default = 0;
+  55:                 $s->installed_domain = url('/');
+  56                  $s->activated_date = date('Y-m-d');
+
+database/migrations/2023_08_25_062823_create_update_7.1.1_to_7.2.0_table.php:
+  80          $s2->addon_url = "https://codecanyon.net/item/google-meet-module-for-infixedu-gmeet-live-class/42463761";
+  81:         $s2->installed_domain = url('/');
+  82          $s2->activated_date = date('Y-m-d');
+
+  98          $s->is_default = 0;
+  99:         $s->installed_domain = url('/');
+  100          $s->save();
+
+database/migrations/2023_09_22_1346345_update_v721_to_v8_migrations.php:
+  586              $s->addon_url = "mailto:support@spondonit.com";
+  587:             $s->installed_domain = url('/');
+  588              $s->activated_date = date('Y-m-d');
+
+  605              $s2->addon_url = "maito:support@spondonit.com";
+  606:             $s2->installed_domain = url('/');
+  607              $s2->activated_date = date('Y-m-d');
+
+  622              $s3->addon_url = "maito:support@spondonit.com";
+  623:             $s3->installed_domain = url('/');
+  624              $s3->activated_date = date('Y-m-d');
+
+database/migrations/2024_03_05_081452_update_v8.1.1_to_8.1.2.php:
+  26              $s3->addon_url = "maito:support@spondonit.com";
+  27:             $s3->installed_domain = url('/');
+  28              $s3->activated_date = date('Y-m-d');
+
+database/migrations/2024_03_15_081452_update_v8.1.2_to_8.2.0.php:
+  27              $s->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+  28:             $s->installed_domain = url('/');
+  29              $s->activated_date = date('Y-m-d');
+
+database/migrations/2024_07_17_081453_update_for_saas.php:
+   36              $s->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+   37:             $s->installed_domain = url('/');
+   38              $s->activated_date = date('Y-m-d');
+
+   52              $s->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+   53:             $s->installed_domain = url('/');
+   54              $s->activated_date = date('Y-m-d');
+
+   68              $s->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+   69:             $s->installed_domain = url('/');
+   70              $s->activated_date = date('Y-m-d');
+
+   84              $s->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+   85:             $s->installed_domain = url('/');
+   86              $s->activated_date = date('Y-m-d');
+
+  100              $s->addon_url = "https://codecanyon.net/item/infixedu-zoom-live-class/27623128?s_rank=12";
+  101:             $s->installed_domain = url('/');
+  102              $s->activated_date = date('Y-m-d');
+
+db/ccedb.sql:
+  2983    `checksum` varchar(200) DEFAULT NULL,
+  2984:   `installed_domain` varchar(200) DEFAULT NULL,
+  2985    `is_default` tinyint(1) NOT NULL DEFAULT 0,
+
+  2996  
+  2997: INSERT INTO `infix_module_managers` (`id`, `name`, `email`, `notes`, `version`, `update_url`, `purchase_code`, `checksum`, `installed_domain`, `is_default`, `addon_url`, `activated_date`, `lang_type`, `created_at`, `updated_at`) VALUES
+  2998  (1, 'RolePermission', 'support@spondonit.com', 'This is Role Permission Module for manage module. Thanks for using.', '0.1', 'https://spondonit.com/contact', '1739210267', NULL, 'http://localhost/capstone2', 1, NULL, '2025-02-10', NULL, '2025-02-10 09:57:47', '2025-02-10 09:57:47'),
+
+Modules/RolePermission/Resources/views/index.blade.php:
+  53                                  <tr>
+  54:                                     <td>@lang('common.installed_domain')</td>
+  55:                                     <td>{{@$data->installed_domain}}</td>
+  56                                  </tr> 
+
+Modules/TemplateSettings/Resources/views/index.blade.php:
+  53                                  <tr>
+  54:                                     <td>@lang('common.installed_domain')</td>
+  55:                                     <td>{{@$data->installed_domain}}</td>
+  56                                  </tr> 
+
+packages/larabuild/optionbuilder/public/js/summernote-lite.min.js:
+  1  /*! For license information please see summernote-lite.min.js.LICENSE.txt */
+  2: ⟪ 7135 characters skipped ⟫:!h&&/webkit/i.test(c),isChrome:!h&&/chrome/i.test(c),isSafari:!h&&/safari/i.test(c)&&!/chrome/i.test(c),browserVersion:l,jqueryVersion:parseFloat(i.a.fn.jquery),isSupportAmd:r,isSupportTouch:f,isFontInstalled:function(t){var e="Comic Sans MS"===t?"Courier New":"Comic Sans MS",n=document.createElement("canvas").getContext("2d");n.font="200px '"+e+"'";var o=n.measureText("mmmmmmmmmmwwwww").width;return n.font="200px "+s(t)+', "'+e+'"',o!==n.measureText("mmmmmmmmmmwwwww").width},isW3CRangeSupport:!!document.createRange,inputEventName:p,genericFontFamilies:a,validFontName:s};var v=0;var g={eq:function(t){return function(e){return t===e}},eq2:function(t,e){return t===e},peq2:function(t){return function(e,n){return e[t]===n[t]}},ok:function(){return!0},fail:function(){return!1},self:function(t){return t},not:function(t){return function(){return!t.apply(t,arguments)}},and:function(t,e){return function(n){return t(n)&&e(n)}},invoke:function(t,e){return function(){return t[e].apply(t,arguments)}},resetUniqueId:function(){v=0},uniqueId:function(t){var e=++v+"";return t?t+e:e},rect2bnd:function(t){var e=i()(document);return{top:t.top+e.scrollTop(),left:t.left+e.scrollLeft(),width:t.right-t.l⟪ 77570 characters skipped ⟫his.options.container,this.ui.button(t)}},{key:"initialize",value:function(){this.addToolbarButtons(),this.addImagePopoverButtons(),this.addLinkPopoverButtons(),this.addTablePopoverButtons(),this.fontInstalledMap={}}},{key:"destroy",value:function(){delete this.fontInstalledMap}},{key:"isFontInstalled",value:function(t){return Object.prototype.hasOwnProperty.call(this.fontInstalledMap,t)||(this.fontInstalledMap[t]=m.isFontInstalled(t)||C.contains(this.options.fontNamesIgnoreCheck,t)),this.fontInstalledMap[t]}},{key:"isFontDeservedToAdd",value:function(t){return""!==(t=t.toLowerCase())&&this.isFontInstalled(t)&&-1===m.genericFontFamilies.indexOf(t)}},{key:"colorPalette",value:function(t,e,n,o){var r=this;return this.ui.buttonGroup({className:"note-color "+t,children:[this.button({className:"note-current-color-button",contents:this.ui.icon(this.options.icons.font+" note-recent-color"),tooltip:e,click:function(t){var e=i()(t.currentTarget);n&&o?r.context.invoke("editor.color",{backColor:e.attr("data-backColor"),foreColor:e.attr("data-foreColor")}):n?r.context.invoke("editor.color",{backColor:e.attr("data-backColor")}):o&&r.context.invoke("editor.color",{foreColor:e.attr("data-foreColor")})},callback:function(t){var e=t.find(".note-recent-color");n&&(e.css("background-color",r.options.colorButton.backColor),t.attr("data-backColor",r.options.colorButton.backColor)),o?(e.css("color",r.options.colorButton.foreColor),t.attr("data-foreColor",r.options.colorButton.foreColor)):e.css("color","transparent")}}),this.button({className:"dropdown-toggle",contents:this.ui.dropdownButtonContents(⟪ 6719 characters skipped ⟫an>',t.options),tooltip:t.lang.font.name,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className:"dropdown-fontname",checkClassName:t.options.icons.menuCheck,items:t.options.fontNames.filter(t.isFontInstalled.bind(t)),title:t.lang.font.name,template:function(t){return'<span style="font-family: '+m.validFontName(t)+'">'+t+"</span>"},click:t.context.createInvokeHandlerAndUpdateState("editor.fontName")})]).render()})),this.context.memo("button.fontsize",(function(){return t.ui.buttonGroup([t.button({className:"dropdown-toggle",contents:t.ui.dropdownButtonContents('<span class="note-current-fontsize"></span>',t.options),tooltip:t.lang.font.size,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className:"dropdown-fontsize",checkClassName:t.options.icons.menuCheck,items:t.options.fontSizes,title:t.lang.font.size,click:t.context.createInvokeHandlerAndUpdateState("editor.fontSize")})]).render()})),this.context.memo("button.fontsizeunit",(function(){return t.ui.buttonGroup([t.button({className:"dropdown-toggle",contents:t.ui.dropdownButtonContents('<span class="note-current-fontsizeunit"></span>',t.options),tooltip:t.lang.font.sizeunit,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className⟪ 11397 characters skipped ⟫hrough"===o["font-strikethrough"]}}),o["font-family"]){var r=o["font-family"].split(",").map((function(t){return t.replace(/[\'\"]/g,"").replace(/\s+$/,"").replace(/^\s+/,"")})),a=C.find(r,this.isFontInstalled.bind(this));n.find(".dropdown-fontname a").each((function(t,e){var n=i()(e),o=n.data("value")+""==a+"";n.toggleClass("checked",o)})),n.find(".note-current-fontname").text(a).css("font-family",a)}if(o["font-size"]){var s=o["font-size"];n.find(".dropdown-fontsize a").each((function(t,e){var n=i()(e),o=n.data("value")+""==s+"";n.toggleClass("checked",o)})),n.find(".note-current-fontsize").text(s);var l=o["font-size-unit"];n.find(".dropdown-fontsizeunit a").each((function(t,e){var n=i()(e),o=n.data("value")+""==l+"";n.toggleClass("checked",o)})),n.find(".note-current-fontsizeunit").text(l)}if(o["line-height"]){var c=o["line-height"];n.find(".dropdown-line-height li a").each((function(t,n){var o=i()(n).data("value")+""==c+"";e.className=o?"checked":""}))}}},{key:"updateBtnStates",value:function(t,e){var n=this;i.a.each(e,(function(e,o){n.ui.toggleBtnActive(t.find(e),o())}))}},{key:"tableMoveHandler",value:function(t){var e,n=i()(t.target.parentNode),o=n.next(),r=n.find(".note-dime
+
+public/backEnd/assets/vendors/calender_js/core/main.esm.js:
+  6585          this.isReducing = false;
+  6586:         // isDisplaying: boolean = false // installed in DOM? accepting renders?
+  6587          this.needsRerender = false; // needs a render?
+
+public/backEnd/assets/vendors/calender_js/core/main.js:
+  6591              this.isReducing = false;
+  6592:             // isDisplaying: boolean = false // installed in DOM? accepting renders?
+  6593              this.needsRerender = false; // needs a render?
+
+public/backEnd/assets/vendors/laraberg/js/laraberg.js.map:
+  1: ⟪ 145516 characters skipped ⟫/library/code.js","webpack:///@wordpress/primitives/src/horizontal-rule/index.js","webpack:///@wordpress/icons/src/library/share.js","webpack:///@wordpress/icons/src/library/map-marker.js"],"names":["installedModules","__webpack_require__","moduleId","exports","module","i","l","modules","call","m","c","d","name","getter","o","Object","defineProperty","enumerable","get","r","Symbol","toStringTag","value","t","mode","__esModule","ns","create","key","bind","n","object","property","prototype","hasOwnProperty","p","s","logErrorOnce","memoize","console","args","sprintfjs","error","PRECEDENCE","OPENERS","TERMINATORS","PATTERN","OPERATORS","a","b","compile","expression","terms","match","operator","term","element","stack","substr","index","trim","push","pop","indexOf","length","concat","reverse","postfix","variables","j","getOperatorResult","Array","apply","earlyReturn","DEFAULT_OPTIONS","contextDelimiter","onMissingKey","Tannin","data","options","this","pluralForms","undefined","getPluralForm","domain","config","plural","pf","evaluate","plural_forms","parts","part","split","getPluralExpression","dcnpgettext","context","singular","entry","DEFAULT_LOCALE_DATA","createI18n","tannin","setLocal⟪ 2128653 characters skipped ⟫,EACL,6BAAKrnV,QAAL,YAAyBD,MAAM,8BAC9B,6BAAMvkD,EAAE,6PAIV,O,gDCNM8rY,EACL,6BAAKvnV,MAAL,8BAAyCC,QAAQ,aAChD,6BAAMxkD,EAAE,8ZAIV","file":"laraberg.js","sourcesContent":[" \t// The module cache\n \tvar installedModules = {};\n\n \t// The require function\n \tfunction __webpack_require__(moduleId) {\n\n \t\t// Check if module is in cache\n \t\tif(installedModules[moduleId]) {\n \t\t\treturn installedModules[moduleId].exports;\n \t\t}\n \t\t// Create a new module (and put it into the cache)\n \t\tvar module = installedModules[moduleId] = {\n \t\t\ti: moduleId,\n \t\t\tl: false,\n \t\t\texports: {}\n \t\t};\n\n \t\t// Execute the module function\n \t\tmodules[moduleId].call(module.exports, module, module.exports, __webpack_require__);\n\n \t\t// Flag the module as loaded\n \t\tmodule.l = true;\n\n \t\t// Return the exports of the module\n \t\treturn module.exports;\n \t}\n\n\n \t// expose the modules object (__webpack_modules__)\n \t__webpack_require__.m = modules;\n\n \t// expose the module cache\n \t__webpack_require__.c = installedModules;\n\n \t// define getter function for harmony exports\n \t__webpack_require__.d = function(exports, name, getter) {\n \t\tif(!__webpack_require__.o(exports, name)) {\n \t\t\tObject.defineProperty(exports, name, { enumerable: true, get: getter });\n \t\t}\n \t};\n\n \t// define __esModule on exports\n \t__webpack_require__.r = function(exports) {\n \t\tif(typeof Symbol !== 'undefined' && Symbol.toStringTag) {\n \t\t\tObject.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });\n \t\t}\n \t\tObject.defineProperty(exports, '__esModule', { value: true });\n \t};\n\n \t// create a fake namespace object\n \t// mode & 1: value is a module id, require it\n \t// mode & 2: merge all properties of value into the ns\n \t// mode & 4: return value when already ns object\n \t// mode & 8|1: behave like require\n \t__webpack_require__.t = function(value, mode) {\n \t\tif(mode & 1) value = __webpack_require__(value);\n \t\tif(mode & 8) return value;\n \t\tif((mode & 4) && typ⟪ 2375337 characters skipped ⟫heme( state = undefined, action ) {\n\tswitch ( action.type ) {\n\t\tcase 'RECEIVE_CURRENT_THEME':\n\t\t\treturn action.currentTheme.stylesheet;\n\t}\n\n\treturn state;\n}\n\n/**\n * Reducer managing installed themes.\n *\n * @param {Object} state  Current state.\n * @param {Object} action Dispatched action.\n *\n * @return {Object} Updated state.\n */\nexport function themes( state = {}, action ) {\n\tswitch ( action.type ) {\n\t\tcase 'RECEIVE_CURRENT_THEME':\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\t[ action.currentTheme.stylesheet ]: action.currentTheme,\n\t\t\t};\n\t}\n\n\treturn state;\n}\n\n/**\n * Reducer managing theme supports data.\n *\n * @param {Object} state  Current state.\n * @param {Object} action Dispatched action.\n *\n * @return {Object} Updated state.\n */\nexport function themeSupports( state = {}, action ) {\n\tswitch ( action.type ) {\n\t\tcase 'RECEIVE_THEME_SUPPORTS':\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\t...action.themeSupports,\n\t\t\t};\n\t}\n\n\treturn state;\n}\n\n/**\n * Higher Order Reducer for a given entity config. It supports:\n *\n *  - Fetching\n *  - Editing\n *  - Saving\n *\n * @param {Object} entityConfig  Entity config.\n *\n * @re⟪ 2430268 characters skipped ⟫oardJS\"] = factory();\n\telse\n\t\troot[\"ClipboardJS\"] = factory();\n})(this, function() {\nreturn /******/ (function(modules) { // webpackBootstrap\n/******/ \t// The module cache\n/******/ \tvar installedModules = {};\n/******/\n/******/ \t// The require function\n/******/ \tfunction __webpack_require__(moduleId) {\n/******/\n/******/ \t\t// Check if module is in cache\n/******/ \t\tif(installedModules[moduleId]) {\n/******/ \t\t\treturn installedModules[moduleId].exports;\n/******/ \t\t}\n/******/ \t\t// Create a new module (and put it into the cache)\n/******/ \t\tvar module = installedModules[moduleId] = {\n/******/ \t\t\ti: moduleId,\n/******/ \t\t\tl: false,\n/******/ \t\t\texports: {}\n/******/ \t\t};\n/******/\n/******/ \t\t// Execute the module function\n/******/ \t\tmodules[moduleId].call(module.exports, module, module.exports, __webpack_require__);\n/******/\n/******/ \t\t// Flag the module as loaded\n/******/ \t\tmodule.l = true;\n/******/\n/******/ \t\t// Return the exports of the module\n/******/ \t\treturn module.exports;\n/******/ \t}\n/******/\n/******/\n/******/ \t// expose the modules object (__webpack_modules__)\n/******/ \t__webpack_require__.m = modules;\n/******/\n/******/ \t// expose the module cache\n/******/ \t__webpack_require__.c = installedModules;\n/******/\n/******/ \t// identity function for calling harmony imports with the correct context\n/******/ \t__webpack_require__.i = function(value) { return value; };\n/******/\n/******/ \t// define getter function for harmony exports\n/******/ \t__webpack_require__.d = function(exports, name, getter) {\n/******/ \t\tif(!__webpack_require__.o(exports, name)) {\n/******/ \t\t\tObject.defineProperty(exports, name, {\n/******/ \t\t\t\tconfigurable: false,\n/******/ \t\t\t\tenumerable: true,\n/******/ \t\t\t\tget: getter\n/******/ \t\t\t});\n/******/ \t\t}\n/******/ \t};\n/******/\n/******/ \t// getDefaultExport function for compatibility with non-harmony modules\n/******/ \t__webpack_require__.n = function(module) {\n/******/ \t\tvar getter = module && module.__esModule ?\n/******/ \t\t\tfunction getDefault() { return module['default']; } :\n/******/ \t\t\tfunction getModuleExports() { return module; };\n/******/ \t\t__webpack_require__.d(getter, 'a', getter);\n/******/ 
+
+public/backEnd/assets/vendors/text_editor/summernote-bs4.js:
+  1  /*! For license information please see summernote-bs4.min.js.LICENSE.txt */
+  2: ⟪ 7135 characters skipped ⟫:!h&&/webkit/i.test(c),isChrome:!h&&/chrome/i.test(c),isSafari:!h&&/safari/i.test(c)&&!/chrome/i.test(c),browserVersion:l,jqueryVersion:parseFloat(i.a.fn.jquery),isSupportAmd:r,isSupportTouch:f,isFontInstalled:function(t){var e="Comic Sans MS"===t?"Courier New":"Comic Sans MS",n=document.createElement("canvas").getContext("2d");n.font="200px '"+e+"'";var o=n.measureText("mmmmmmmmmmwwwww").width;return n.font="200px "+s(t)+', "'+e+'"',o!==n.measureText("mmmmmmmmmmwwwww").width},isW3CRangeSupport:!!document.createRange,inputEventName:p,genericFontFamilies:a,validFontName:s};var v=0;var g={eq:function(t){return function(e){return t===e}},eq2:function(t,e){return t===e},peq2:function(t){return function(e,n){return e[t]===n[t]}},ok:function(){return!0},fail:function(){return!1},self:function(t){return t},not:function(t){return function(){return!t.apply(t,arguments)}},and:function(t,e){return function(n){return t(n)&&e(n)}},invoke:function(t,e){return function(){return t[e].apply(t,arguments)}},resetUniqueId:function(){v=0},uniqueId:function(t){var e=++v+"";return t?t+e:e},rect2bnd:function(t){var e=i()(document);return{top:t.top+e.scrollTop(),left:t.left+e.scrollLeft(),width:t.right-t.l⟪ 77570 characters skipped ⟫his.options.container,this.ui.button(t)}},{key:"initialize",value:function(){this.addToolbarButtons(),this.addImagePopoverButtons(),this.addLinkPopoverButtons(),this.addTablePopoverButtons(),this.fontInstalledMap={}}},{key:"destroy",value:function(){delete this.fontInstalledMap}},{key:"isFontInstalled",value:function(t){return Object.prototype.hasOwnProperty.call(this.fontInstalledMap,t)||(this.fontInstalledMap[t]=m.isFontInstalled(t)||C.contains(this.options.fontNamesIgnoreCheck,t)),this.fontInstalledMap[t]}},{key:"isFontDeservedToAdd",value:function(t){return""!==(t=t.toLowerCase())&&this.isFontInstalled(t)&&-1===m.genericFontFamilies.indexOf(t)}},{key:"colorPalette",value:function(t,e,n,o){var r=this;return this.ui.buttonGroup({className:"note-color "+t,children:[this.button({className:"note-current-color-button",contents:this.ui.icon(this.options.icons.font+" note-recent-color"),tooltip:e,click:function(t){var e=i()(t.currentTarget);n&&o?r.context.invoke("editor.color",{backColor:e.attr("data-backColor"),foreColor:e.attr("data-foreColor")}):n?r.context.invoke("editor.color",{backColor:e.attr("data-backColor")}):o&&r.context.invoke("editor.color",{foreColor:e.attr("data-foreColor")})},callback:function(t){var e=t.find(".note-recent-color");n&&(e.css("background-color",r.options.colorButton.backColor),t.attr("data-backColor",r.options.colorButton.backColor)),o?(e.css("color",r.options.colorButton.foreColor),t.attr("data-foreColor",r.options.colorButton.foreColor)):e.css("color","transparent")}}),this.button({className:"dropdown-toggle",contents:this.ui.dropdownButtonContents(⟪ 6719 characters skipped ⟫an>',t.options),tooltip:t.lang.font.name,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className:"dropdown-fontname",checkClassName:t.options.icons.menuCheck,items:t.options.fontNames.filter(t.isFontInstalled.bind(t)),title:t.lang.font.name,template:function(t){return'<span style="font-family: '+m.validFontName(t)+'">'+t+"</span>"},click:t.context.createInvokeHandlerAndUpdateState("editor.fontName")})]).render()})),this.context.memo("button.fontsize",(function(){return t.ui.buttonGroup([t.button({className:"dropdown-toggle",contents:t.ui.dropdownButtonContents('<span class="note-current-fontsize"></span>',t.options),tooltip:t.lang.font.size,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className:"dropdown-fontsize",checkClassName:t.options.icons.menuCheck,items:t.options.fontSizes,title:t.lang.font.size,click:t.context.createInvokeHandlerAndUpdateState("editor.fontSize")})]).render()})),this.context.memo("button.fontsizeunit",(function(){return t.ui.buttonGroup([t.button({className:"dropdown-toggle",contents:t.ui.dropdownButtonContents('<span class="note-current-fontsizeunit"></span>',t.options),tooltip:t.lang.font.sizeunit,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className⟪ 11397 characters skipped ⟫hrough"===o["font-strikethrough"]}}),o["font-family"]){var r=o["font-family"].split(",").map((function(t){return t.replace(/[\'\"]/g,"").replace(/\s+$/,"").replace(/^\s+/,"")})),a=C.find(r,this.isFontInstalled.bind(this));n.find(".dropdown-fontname a").each((function(t,e){var n=i()(e),o=n.data("value")+""==a+"";n.toggleClass("checked",o)})),n.find(".note-current-fontname").text(a).css("font-family",a)}if(o["font-size"]){var s=o["font-size"];n.find(".dropdown-fontsize a").each((function(t,e){var n=i()(e),o=n.data("value")+""==s+"";n.toggleClass("checked",o)})),n.find(".note-current-fontsize").text(s);var l=o["font-size-unit"];n.find(".dropdown-fontsizeunit a").each((function(t,e){var n=i()(e),o=n.data("value")+""==l+"";n.toggleClass("checked",o)})),n.find(".note-current-fontsizeunit").text(l)}if(o["line-height"]){var c=o["line-height"];n.find(".dropdown-line-height li a").each((function(t,n){var o=i()(n).data("value")+""==c+"";e.className=o?"checked":""}))}}},{key:"updateBtnStates",value:function(t,e){var n=this;i.a.each(e,(function(e,o){n.ui.toggleBtnActive(t.find(e),o())}))}},{key:"tableMoveHandler",value:function(t){var e,n=i()(t.target.parentNode),o=n.next(),r=n.find(".note-dime
+
+public/backEnd/assets/vendors/uppy/uppy.legacy.min.js:
+  1  "use strict";
+  2: ⟪ 182753 characters skipped ⟫arget is not a Plugin class. Please check that you're not specifying a React Component instead of a plugin. If you are using @uppy/* packages directly, make sure you have only 1 version of @uppy/core installed: run `npm ls @uppy/core` on the command line and verify that all the versions match and are deduped correctly.":p+="If you meant to target an HTML element, please make sure that the element exists. Check that the <script> tag initializing Uppy is right before the closing </body> tag at the end of the page. (see https://github.com/transloadit/uppy/issues/1042)\n\nIf you meant to target a plugin, please confirm that your `import` statements or `require` calls are correct.",new Error(p)}},{key:"update",value:function(i){if(this.el!=null){var a,o;(a=(o=I4(this,xf))[xf])==null||a.call(o,i)}}},{key:"unmount",value:function(){if(this.isTargetDOMEl){var i;(i=this.el)==null||i.remove()}this.onUnmount()}},{key:"onMount",value:function(){}},{key:"onUnmount",value:function(){}}]),r}(WNe);x4.exports=GNe});var nt=h(function(vpt,ms){"use strict";var C4=e4(),KNe=F4(),YNe=bn(),XNe=SP(),QNe=XNe.debugLogger;ms.exports=C4;ms.exports.Uppy=C4;ms.exports.UIPlugin=KNe;ms.exports.BasePlugin=YNe;ms.ex
+  3  /*!
+
+public/backEnd/assets/vendors/uppy/uppy.min.js:
+  6   * ${o.message}`}),this.info({message:this.i18n("addBulkFilesFailed",{smart_count:s.length}),details:n},"error",this.opts.infoTimeout),typeof AggregateError=="function")throw new AggregateError(s,n);{let o=new Error(n);throw o.errors=s,o}}}removeFiles(e,t){let{files:r,currentUploads:s}=this.getState(),n={...r},o={...s},a=Object.create(null);e.forEach(d=>{r[d]&&(a[d]=r[d],delete n[d])});function l(d){return a[d]===void 0}Object.keys(o).forEach(d=>{let m=s[d].fileIDs.filter(l);if(m.length===0){delete o[d];return}o[d]={...s[d],fileIDs:m}});let c={currentUploads:o,files:n};Object.keys(n).length===0&&(c.allowNewUpload=!0,c.error=null,c.recoveredState=null),this.setState(c),this.calculateTotalProgress();let u=Object.keys(a);u.forEach(d=>{this.emit("file-removed",a[d],t)}),u.length>5?this.log(`Removed ${u.length} files`):this.log(`Removed files: ${u.join(", ")}`)}removeFile(e,t){t===void 0&&(t=null),this.removeFiles([e],t)}pauseResume(e){if(!this.getState().capabilities.resumableUploads||this.getFile(e).uploadComplete)return;let r=!(this.getFile(e).isPaused||!1);return this.setFileState(e,{isPaused:r}),this.emit("upload-pause",e,r),r}pauseAll(){let e={...this.getState().files};Object.keys(e).filter(r=>!e[r].progress.uploadComplete&&e[r].progress.uploadStarted).forEach(r=>{let s={...e[r],isPaused:!0};e[r]=s}),this.setState({files:e}),this.emit("pause-all")}resumeAll(){let e={...this.getState().files};Object.keys(e).filter(r=>!e[r].progress.uploadComplete&&e[r].progress.uploadStarted).forEach(r=>{let s={...e[r],isPaused:!1,error:null};e[r]=s}),this.setState({files:e}),this.emit("resume-all")}retryAll(){let e={...this.getState().files},t=Object.keys(e).filter(s=>e[s].error);if(t.forEach(s=>{let n={...e[s],isPaused:!1,error:null};e[s]=n}),this.setState({files:e,error:null}),this.emit("retry-all",t),t.length===0)return Promise.resolve({successful:[],failed:[]});let r=L(this,_i)[_i](t,{forceAllowNewUpload:!0});return L(this,Si)[Si](r)}cancelAll(){this.emit("cancel-all");let{files:e}=this.getState(),t=Object.keys(e);t.length&&this.removeFiles(t,"cancel-all"),this.setState({totalProgress:0,error:null,recoveredState:null})}retryUpload(e){this.setFileState(e,{error:null,isPaused:!1}),this.emit("upload-retry",e);let t=L(this,_i)[_i]([e],{forceAllowNewUpload:!0});return L(this,Si)[Si](t)}reset(){this.cancelAll()}logout(){this.iteratePlugins(e=>{e.provider&&e.provider.logout&&e.provider.logout()})}calculateProgress(e,t){if(!this.getFile(e.id)){this.log(`Not setting progress for a file that has been removed: ${e.id}`);return}let r=Number.isFinite(t.bytesTotal)&&t.bytesTotal>0;this.setFileState(e.id,{progress:{...this.getFile(e.id).progress,bytesUploaded:t.bytesUploaded,bytesTotal:t.bytesTotal,percentage:r?Math.round(t.bytesUploaded/t.bytesTotal*100):0}}),this.calculateTotalProgress()}calculateTotalProgress(){let t=this.getFiles().filter(c=>c.progress.uploadStarted||c.progress.preprocess||c.progress.postprocess);if(t.length===0){this.emit("progress",0),this.setState({totalProgress:0});return}let r=t.filter(c=>c.progress.bytesTotal!=null),s=t.filter(c=>c.progress.bytesTotal==null);if(r.length===0){let c=t.length*100,u=s.reduce((m,b)=>m+b.progress.percentage,0),d=Math.round(u/c*100);this.setState({totalProgress:d});return}let n=r.reduce((c,u)=>c+u.progress.bytesTotal,0),o=n/r.length;n+=o*s.length;let a=0;r.forEach(c=>{a+=c.progress.bytesUploaded}),s.forEach(c=>{a+=o*(c.progress.percentage||0)/100});let l=n===0?0:Math.round(a/n*100);l>100&&(l=100),this.setState({totalProgress:l}),this.emit("progress",l)}updateOnlineStatus(){(typeof window.navigator.onLine!="undefined"?window.navigator.onLine:!0)?(this.emit("is-online"),this.wasOffline&&(this.emit("back-online"),this.info(this.i18n("connectedToInternet"),"success",3e3),this.wasOffline=!1)):(this.emit("is-offline"),this.info(this.i18n("noInternetConnection"),"error",0),this.wasOffline=!0)}getID(){return this.opts.id}use(e,t){if(typeof e!="function"){let o=`Expected a plugin class, but got ${e===null?"null":typeof e}. Please verify that the plugin was imported and spelled correctly.`;throw new TypeError(o)}let r=new e(this,t),s=r.id;if(!s)throw new Error("Your plugin must have an id");if(!r.type)throw new Error("Your plugin must have a type");let n=this.getPlugin(s);if(n){let o=`Already found a plugin named '${n.id}'. Tried to use: '${s}'.
+  7: ⟪ 22596 characters skipped ⟫arget is not a Plugin class. Please check that you're not specifying a React Component instead of a plugin. If you are using @uppy/* packages directly, make sure you have only 1 version of @uppy/core installed: run `npm ls @uppy/core` on the command line and verify that all the versions match and are deduped correctly.":o+="If you meant to target an HTML element, please make sure that the element exists. Check that the <script> tag initializing Uppy is right before the closing </body> tag at the end of the page. (see https://github.com/transloadit/uppy/issues/1042)\n\nIf you meant to target a plugin, please confirm that your `import` statements or `require` calls are correct.",new Error(o)}update(e){if(this.el!=null){var t,r;(t=(r=Fp(this,dn))[dn])==null||t.call(r,e)}}unmount(){if(this.isTargetDOMEl){var e;(e=this.el)==null||e.remove()}this.onUnmount()}onMount(){}onUnmount(){}};Cp.exports=yo});var ye=g((dD,Kr)=>{"use strict";var Rp=Zd(),q3=xp(),L3=Mt(),{debugLogger:j3}=Nl();Kr.exports=Rp;Kr.exports.Uppy=Rp;Kr.exports.UIPlugin=q3;Kr.exports.BasePlugin=L3;Kr.exports.debugLogger=j3});var vr=g((pD,Tp)=>{var Op=class extends Error{constructor(e,t){t===void 0&&(t=null);super("This looks 
+  8  
+
+public/backEnd/vendors/calender_js/core/main.esm.js:
+  6585          this.isReducing = false;
+  6586:         // isDisplaying: boolean = false // installed in DOM? accepting renders?
+  6587          this.needsRerender = false; // needs a render?
+
+public/backEnd/vendors/calender_js/core/main.js:
+  6591              this.isReducing = false;
+  6592:             // isDisplaying: boolean = false // installed in DOM? accepting renders?
+  6593              this.needsRerender = false; // needs a render?
+
+public/backEnd/vendors/editor/summernote-bs4.js:
+   989    /**
+   990:    * returns whether font is installed or not.
+   991     *
+
+   994     */
+   995:   function isFontInstalled(fontName) {
+   996        var testFontName = fontName === 'Comic Sans MS' ? 'Courier New' : 'Comic Sans MS';
+
+  1049        hasCodeMirror: hasCodeMirror,
+  1050:       isFontInstalled: isFontInstalled,
+  1051        isW3CRangeSupport: !!document.createRange,
+
+  6131            this.addTablePopoverButtons();
+  6132:           this.fontInstalledMap = {};
+  6133        };
+  6134        Buttons.prototype.destroy = function () {
+  6135:           delete this.fontInstalledMap;
+  6136        };
+  6137:       Buttons.prototype.isFontInstalled = function (name) {
+  6138:           if (!this.fontInstalledMap.hasOwnProperty(name)) {
+  6139:               this.fontInstalledMap[name] = env.isFontInstalled(name) ||
+  6140                    lists.contains(this.options.fontNamesIgnoreCheck, name);
+  6141            }
+  6142:           return this.fontInstalledMap[name];
+  6143        };
+
+  6146            name = name.toLowerCase();
+  6147:           return (name !== '' && this.isFontInstalled(name) && genericFamilies.indexOf(name) === -1);
+  6148        };
+
+  6428                        checkClassName: _this.options.icons.menuCheck,
+  6429:                       items: _this.options.fontNames.filter(_this.isFontInstalled.bind(_this)),
+  6430                        title: _this.lang.font.name,
+
+  6856                });
+  6857:               var fontName_1 = lists.find(fontNames, this.isFontInstalled.bind(this));
+  6858                $cont.find('.dropdown-fontname a').each(function (idx, item) {
+
+public/backEnd/vendors/editor/ckeditor/README.md:
+  24  
+  25: **Note:** CKEditor is by default installed in the `ckeditor` folder. You can
+  26  place the files in whichever you want though.
+
+public/backEnd/vendors/js/summernote.js:
+    24  /******/ 	// The module cache
+    25: /******/ 	var installedModules = {};
+    26  /******/
+
+    30  /******/ 		// Check if module is in cache
+    31: /******/ 		if(installedModules[moduleId]) {
+    32: /******/ 			return installedModules[moduleId].exports;
+    33  /******/ 		}
+    34  /******/ 		// Create a new module (and put it into the cache)
+    35: /******/ 		var module = installedModules[moduleId] = {
+    36  /******/ 			i: moduleId,
+
+    55  /******/ 	// expose the module cache
+    56: /******/ 	__webpack_require__.c = installedModules;
+    57  /******/
+
+   399  /**
+   400:  * returns whether font is installed or not.
+   401   *
+
+   411  
+   412: function env_isFontInstalled(fontName) {
+   413    var testFontName = fontName === 'Comic Sans MS' ? 'Courier New' : 'Comic Sans MS';
+
+   469    isSupportTouch: isSupportTouch,
+   470:   isFontInstalled: env_isFontInstalled,
+   471    isW3CRangeSupport: !!document.createRange,
+
+  7354        this.addTablePopoverButtons();
+  7355:       this.fontInstalledMap = {};
+  7356      }
+
+  7359      value: function destroy() {
+  7360:       delete this.fontInstalledMap;
+  7361      }
+  7362    }, {
+  7363:     key: "isFontInstalled",
+  7364:     value: function isFontInstalled(name) {
+  7365:       if (!Object.prototype.hasOwnProperty.call(this.fontInstalledMap, name)) {
+  7366:         this.fontInstalledMap[name] = env.isFontInstalled(name) || lists.contains(this.options.fontNamesIgnoreCheck, name);
+  7367        }
+  7368  
+  7369:       return this.fontInstalledMap[name];
+  7370      }
+
+  7374        name = name.toLowerCase();
+  7375:       return name !== '' && this.isFontInstalled(name) && env.genericFontFamilies.indexOf(name) === -1;
+  7376      }
+
+  7629            checkClassName: _this2.options.icons.menuCheck,
+  7630:           items: _this2.options.fontNames.filter(_this2.isFontInstalled.bind(_this2)),
+  7631            title: _this2.lang.font.name,
+
+  8068          });
+  8069:         var fontName = lists.find(fontNames, this.isFontInstalled.bind(this));
+  8070          $cont.find('.dropdown-fontname a').each(function (idx, item) {
+
+public/backEnd/vendors/laraberg/js/laraberg.js.map:
+  1: ⟪ 145516 characters skipped ⟫/library/code.js","webpack:///@wordpress/primitives/src/horizontal-rule/index.js","webpack:///@wordpress/icons/src/library/share.js","webpack:///@wordpress/icons/src/library/map-marker.js"],"names":["installedModules","__webpack_require__","moduleId","exports","module","i","l","modules","call","m","c","d","name","getter","o","Object","defineProperty","enumerable","get","r","Symbol","toStringTag","value","t","mode","__esModule","ns","create","key","bind","n","object","property","prototype","hasOwnProperty","p","s","logErrorOnce","memoize","console","args","sprintfjs","error","PRECEDENCE","OPENERS","TERMINATORS","PATTERN","OPERATORS","a","b","compile","expression","terms","match","operator","term","element","stack","substr","index","trim","push","pop","indexOf","length","concat","reverse","postfix","variables","j","getOperatorResult","Array","apply","earlyReturn","DEFAULT_OPTIONS","contextDelimiter","onMissingKey","Tannin","data","options","this","pluralForms","undefined","getPluralForm","domain","config","plural","pf","evaluate","plural_forms","parts","part","split","getPluralExpression","dcnpgettext","context","singular","entry","DEFAULT_LOCALE_DATA","createI18n","tannin","setLocal⟪ 2128653 characters skipped ⟫,EACL,6BAAKrnV,QAAL,YAAyBD,MAAM,8BAC9B,6BAAMvkD,EAAE,6PAIV,O,gDCNM8rY,EACL,6BAAKvnV,MAAL,8BAAyCC,QAAQ,aAChD,6BAAMxkD,EAAE,8ZAIV","file":"laraberg.js","sourcesContent":[" \t// The module cache\n \tvar installedModules = {};\n\n \t// The require function\n \tfunction __webpack_require__(moduleId) {\n\n \t\t// Check if module is in cache\n \t\tif(installedModules[moduleId]) {\n \t\t\treturn installedModules[moduleId].exports;\n \t\t}\n \t\t// Create a new module (and put it into the cache)\n \t\tvar module = installedModules[moduleId] = {\n \t\t\ti: moduleId,\n \t\t\tl: false,\n \t\t\texports: {}\n \t\t};\n\n \t\t// Execute the module function\n \t\tmodules[moduleId].call(module.exports, module, module.exports, __webpack_require__);\n\n \t\t// Flag the module as loaded\n \t\tmodule.l = true;\n\n \t\t// Return the exports of the module\n \t\treturn module.exports;\n \t}\n\n\n \t// expose the modules object (__webpack_modules__)\n \t__webpack_require__.m = modules;\n\n \t// expose the module cache\n \t__webpack_require__.c = installedModules;\n\n \t// define getter function for harmony exports\n \t__webpack_require__.d = function(exports, name, getter) {\n \t\tif(!__webpack_require__.o(exports, name)) {\n \t\t\tObject.defineProperty(exports, name, { enumerable: true, get: getter });\n \t\t}\n \t};\n\n \t// define __esModule on exports\n \t__webpack_require__.r = function(exports) {\n \t\tif(typeof Symbol !== 'undefined' && Symbol.toStringTag) {\n \t\t\tObject.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });\n \t\t}\n \t\tObject.defineProperty(exports, '__esModule', { value: true });\n \t};\n\n \t// create a fake namespace object\n \t// mode & 1: value is a module id, require it\n \t// mode & 2: merge all properties of value into the ns\n \t// mode & 4: return value when already ns object\n \t// mode & 8|1: behave like require\n \t__webpack_require__.t = function(value, mode) {\n \t\tif(mode & 1) value = __webpack_require__(value);\n \t\tif(mode & 8) return value;\n \t\tif((mode & 4) && typ⟪ 2375337 characters skipped ⟫heme( state = undefined, action ) {\n\tswitch ( action.type ) {\n\t\tcase 'RECEIVE_CURRENT_THEME':\n\t\t\treturn action.currentTheme.stylesheet;\n\t}\n\n\treturn state;\n}\n\n/**\n * Reducer managing installed themes.\n *\n * @param {Object} state  Current state.\n * @param {Object} action Dispatched action.\n *\n * @return {Object} Updated state.\n */\nexport function themes( state = {}, action ) {\n\tswitch ( action.type ) {\n\t\tcase 'RECEIVE_CURRENT_THEME':\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\t[ action.currentTheme.stylesheet ]: action.currentTheme,\n\t\t\t};\n\t}\n\n\treturn state;\n}\n\n/**\n * Reducer managing theme supports data.\n *\n * @param {Object} state  Current state.\n * @param {Object} action Dispatched action.\n *\n * @return {Object} Updated state.\n */\nexport function themeSupports( state = {}, action ) {\n\tswitch ( action.type ) {\n\t\tcase 'RECEIVE_THEME_SUPPORTS':\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\t...action.themeSupports,\n\t\t\t};\n\t}\n\n\treturn state;\n}\n\n/**\n * Higher Order Reducer for a given entity config. It supports:\n *\n *  - Fetching\n *  - Editing\n *  - Saving\n *\n * @param {Object} entityConfig  Entity config.\n *\n * @re⟪ 2430268 characters skipped ⟫oardJS\"] = factory();\n\telse\n\t\troot[\"ClipboardJS\"] = factory();\n})(this, function() {\nreturn /******/ (function(modules) { // webpackBootstrap\n/******/ \t// The module cache\n/******/ \tvar installedModules = {};\n/******/\n/******/ \t// The require function\n/******/ \tfunction __webpack_require__(moduleId) {\n/******/\n/******/ \t\t// Check if module is in cache\n/******/ \t\tif(installedModules[moduleId]) {\n/******/ \t\t\treturn installedModules[moduleId].exports;\n/******/ \t\t}\n/******/ \t\t// Create a new module (and put it into the cache)\n/******/ \t\tvar module = installedModules[moduleId] = {\n/******/ \t\t\ti: moduleId,\n/******/ \t\t\tl: false,\n/******/ \t\t\texports: {}\n/******/ \t\t};\n/******/\n/******/ \t\t// Execute the module function\n/******/ \t\tmodules[moduleId].call(module.exports, module, module.exports, __webpack_require__);\n/******/\n/******/ \t\t// Flag the module as loaded\n/******/ \t\tmodule.l = true;\n/******/\n/******/ \t\t// Return the exports of the module\n/******/ \t\treturn module.exports;\n/******/ \t}\n/******/\n/******/\n/******/ \t// expose the modules object (__webpack_modules__)\n/******/ \t__webpack_require__.m = modules;\n/******/\n/******/ \t// expose the module cache\n/******/ \t__webpack_require__.c = installedModules;\n/******/\n/******/ \t// identity function for calling harmony imports with the correct context\n/******/ \t__webpack_require__.i = function(value) { return value; };\n/******/\n/******/ \t// define getter function for harmony exports\n/******/ \t__webpack_require__.d = function(exports, name, getter) {\n/******/ \t\tif(!__webpack_require__.o(exports, name)) {\n/******/ \t\t\tObject.defineProperty(exports, name, {\n/******/ \t\t\t\tconfigurable: false,\n/******/ \t\t\t\tenumerable: true,\n/******/ \t\t\t\tget: getter\n/******/ \t\t\t});\n/******/ \t\t}\n/******/ \t};\n/******/\n/******/ \t// getDefaultExport function for compatibility with non-harmony modules\n/******/ \t__webpack_require__.n = function(module) {\n/******/ \t\tvar getter = module && module.__esModule ?\n/******/ \t\t\tfunction getDefault() { return module['default']; } :\n/******/ \t\t\tfunction getModuleExports() { return module; };\n/******/ \t\t__webpack_require__.d(getter, 'a', getter);\n/******/ 
+
+public/backEnd/vendors/text_editor/summernote-bs4.js:
+  1  /*! For license information please see summernote-bs4.min.js.LICENSE.txt */
+  2: ⟪ 7135 characters skipped ⟫:!h&&/webkit/i.test(c),isChrome:!h&&/chrome/i.test(c),isSafari:!h&&/safari/i.test(c)&&!/chrome/i.test(c),browserVersion:l,jqueryVersion:parseFloat(i.a.fn.jquery),isSupportAmd:r,isSupportTouch:f,isFontInstalled:function(t){var e="Comic Sans MS"===t?"Courier New":"Comic Sans MS",n=document.createElement("canvas").getContext("2d");n.font="200px '"+e+"'";var o=n.measureText("mmmmmmmmmmwwwww").width;return n.font="200px "+s(t)+', "'+e+'"',o!==n.measureText("mmmmmmmmmmwwwww").width},isW3CRangeSupport:!!document.createRange,inputEventName:p,genericFontFamilies:a,validFontName:s};var v=0;var g={eq:function(t){return function(e){return t===e}},eq2:function(t,e){return t===e},peq2:function(t){return function(e,n){return e[t]===n[t]}},ok:function(){return!0},fail:function(){return!1},self:function(t){return t},not:function(t){return function(){return!t.apply(t,arguments)}},and:function(t,e){return function(n){return t(n)&&e(n)}},invoke:function(t,e){return function(){return t[e].apply(t,arguments)}},resetUniqueId:function(){v=0},uniqueId:function(t){var e=++v+"";return t?t+e:e},rect2bnd:function(t){var e=i()(document);return{top:t.top+e.scrollTop(),left:t.left+e.scrollLeft(),width:t.right-t.l⟪ 77570 characters skipped ⟫his.options.container,this.ui.button(t)}},{key:"initialize",value:function(){this.addToolbarButtons(),this.addImagePopoverButtons(),this.addLinkPopoverButtons(),this.addTablePopoverButtons(),this.fontInstalledMap={}}},{key:"destroy",value:function(){delete this.fontInstalledMap}},{key:"isFontInstalled",value:function(t){return Object.prototype.hasOwnProperty.call(this.fontInstalledMap,t)||(this.fontInstalledMap[t]=m.isFontInstalled(t)||C.contains(this.options.fontNamesIgnoreCheck,t)),this.fontInstalledMap[t]}},{key:"isFontDeservedToAdd",value:function(t){return""!==(t=t.toLowerCase())&&this.isFontInstalled(t)&&-1===m.genericFontFamilies.indexOf(t)}},{key:"colorPalette",value:function(t,e,n,o){var r=this;return this.ui.buttonGroup({className:"note-color "+t,children:[this.button({className:"note-current-color-button",contents:this.ui.icon(this.options.icons.font+" note-recent-color"),tooltip:e,click:function(t){var e=i()(t.currentTarget);n&&o?r.context.invoke("editor.color",{backColor:e.attr("data-backColor"),foreColor:e.attr("data-foreColor")}):n?r.context.invoke("editor.color",{backColor:e.attr("data-backColor")}):o&&r.context.invoke("editor.color",{foreColor:e.attr("data-foreColor")})},callback:function(t){var e=t.find(".note-recent-color");n&&(e.css("background-color",r.options.colorButton.backColor),t.attr("data-backColor",r.options.colorButton.backColor)),o?(e.css("color",r.options.colorButton.foreColor),t.attr("data-foreColor",r.options.colorButton.foreColor)):e.css("color","transparent")}}),this.button({className:"dropdown-toggle",contents:this.ui.dropdownButtonContents(⟪ 6719 characters skipped ⟫an>',t.options),tooltip:t.lang.font.name,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className:"dropdown-fontname",checkClassName:t.options.icons.menuCheck,items:t.options.fontNames.filter(t.isFontInstalled.bind(t)),title:t.lang.font.name,template:function(t){return'<span style="font-family: '+m.validFontName(t)+'">'+t+"</span>"},click:t.context.createInvokeHandlerAndUpdateState("editor.fontName")})]).render()})),this.context.memo("button.fontsize",(function(){return t.ui.buttonGroup([t.button({className:"dropdown-toggle",contents:t.ui.dropdownButtonContents('<span class="note-current-fontsize"></span>',t.options),tooltip:t.lang.font.size,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className:"dropdown-fontsize",checkClassName:t.options.icons.menuCheck,items:t.options.fontSizes,title:t.lang.font.size,click:t.context.createInvokeHandlerAndUpdateState("editor.fontSize")})]).render()})),this.context.memo("button.fontsizeunit",(function(){return t.ui.buttonGroup([t.button({className:"dropdown-toggle",contents:t.ui.dropdownButtonContents('<span class="note-current-fontsizeunit"></span>',t.options),tooltip:t.lang.font.sizeunit,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className⟪ 11397 characters skipped ⟫hrough"===o["font-strikethrough"]}}),o["font-family"]){var r=o["font-family"].split(",").map((function(t){return t.replace(/[\'\"]/g,"").replace(/\s+$/,"").replace(/^\s+/,"")})),a=C.find(r,this.isFontInstalled.bind(this));n.find(".dropdown-fontname a").each((function(t,e){var n=i()(e),o=n.data("value")+""==a+"";n.toggleClass("checked",o)})),n.find(".note-current-fontname").text(a).css("font-family",a)}if(o["font-size"]){var s=o["font-size"];n.find(".dropdown-fontsize a").each((function(t,e){var n=i()(e),o=n.data("value")+""==s+"";n.toggleClass("checked",o)})),n.find(".note-current-fontsize").text(s);var l=o["font-size-unit"];n.find(".dropdown-fontsizeunit a").each((function(t,e){var n=i()(e),o=n.data("value")+""==l+"";n.toggleClass("checked",o)})),n.find(".note-current-fontsizeunit").text(l)}if(o["line-height"]){var c=o["line-height"];n.find(".dropdown-line-height li a").each((function(t,n){var o=i()(n).data("value")+""==c+"";e.className=o?"checked":""}))}}},{key:"updateBtnStates",value:function(t,e){var n=this;i.a.each(e,(function(e,o){n.ui.toggleBtnActive(t.find(e),o())}))}},{key:"tableMoveHandler",value:function(t){var e,n=i()(t.target.parentNode),o=n.next(),r=n.find(".note-dime
+
+public/backEnd/vendors/uppy/uppy.legacy.min.js:
+  1  "use strict";
+  2: ⟪ 182753 characters skipped ⟫arget is not a Plugin class. Please check that you're not specifying a React Component instead of a plugin. If you are using @uppy/* packages directly, make sure you have only 1 version of @uppy/core installed: run `npm ls @uppy/core` on the command line and verify that all the versions match and are deduped correctly.":p+="If you meant to target an HTML element, please make sure that the element exists. Check that the <script> tag initializing Uppy is right before the closing </body> tag at the end of the page. (see https://github.com/transloadit/uppy/issues/1042)\n\nIf you meant to target a plugin, please confirm that your `import` statements or `require` calls are correct.",new Error(p)}},{key:"update",value:function(i){if(this.el!=null){var a,o;(a=(o=I4(this,xf))[xf])==null||a.call(o,i)}}},{key:"unmount",value:function(){if(this.isTargetDOMEl){var i;(i=this.el)==null||i.remove()}this.onUnmount()}},{key:"onMount",value:function(){}},{key:"onUnmount",value:function(){}}]),r}(WNe);x4.exports=GNe});var nt=h(function(vpt,ms){"use strict";var C4=e4(),KNe=F4(),YNe=bn(),XNe=SP(),QNe=XNe.debugLogger;ms.exports=C4;ms.exports.Uppy=C4;ms.exports.UIPlugin=KNe;ms.exports.BasePlugin=YNe;ms.ex
+  3  /*!
+
+public/backEnd/vendors/uppy/uppy.min.js:
+  6   * ${o.message}`}),this.info({message:this.i18n("addBulkFilesFailed",{smart_count:s.length}),details:n},"error",this.opts.infoTimeout),typeof AggregateError=="function")throw new AggregateError(s,n);{let o=new Error(n);throw o.errors=s,o}}}removeFiles(e,t){let{files:r,currentUploads:s}=this.getState(),n={...r},o={...s},a=Object.create(null);e.forEach(d=>{r[d]&&(a[d]=r[d],delete n[d])});function l(d){return a[d]===void 0}Object.keys(o).forEach(d=>{let m=s[d].fileIDs.filter(l);if(m.length===0){delete o[d];return}o[d]={...s[d],fileIDs:m}});let c={currentUploads:o,files:n};Object.keys(n).length===0&&(c.allowNewUpload=!0,c.error=null,c.recoveredState=null),this.setState(c),this.calculateTotalProgress();let u=Object.keys(a);u.forEach(d=>{this.emit("file-removed",a[d],t)}),u.length>5?this.log(`Removed ${u.length} files`):this.log(`Removed files: ${u.join(", ")}`)}removeFile(e,t){t===void 0&&(t=null),this.removeFiles([e],t)}pauseResume(e){if(!this.getState().capabilities.resumableUploads||this.getFile(e).uploadComplete)return;let r=!(this.getFile(e).isPaused||!1);return this.setFileState(e,{isPaused:r}),this.emit("upload-pause",e,r),r}pauseAll(){let e={...this.getState().files};Object.keys(e).filter(r=>!e[r].progress.uploadComplete&&e[r].progress.uploadStarted).forEach(r=>{let s={...e[r],isPaused:!0};e[r]=s}),this.setState({files:e}),this.emit("pause-all")}resumeAll(){let e={...this.getState().files};Object.keys(e).filter(r=>!e[r].progress.uploadComplete&&e[r].progress.uploadStarted).forEach(r=>{let s={...e[r],isPaused:!1,error:null};e[r]=s}),this.setState({files:e}),this.emit("resume-all")}retryAll(){let e={...this.getState().files},t=Object.keys(e).filter(s=>e[s].error);if(t.forEach(s=>{let n={...e[s],isPaused:!1,error:null};e[s]=n}),this.setState({files:e,error:null}),this.emit("retry-all",t),t.length===0)return Promise.resolve({successful:[],failed:[]});let r=L(this,_i)[_i](t,{forceAllowNewUpload:!0});return L(this,Si)[Si](r)}cancelAll(){this.emit("cancel-all");let{files:e}=this.getState(),t=Object.keys(e);t.length&&this.removeFiles(t,"cancel-all"),this.setState({totalProgress:0,error:null,recoveredState:null})}retryUpload(e){this.setFileState(e,{error:null,isPaused:!1}),this.emit("upload-retry",e);let t=L(this,_i)[_i]([e],{forceAllowNewUpload:!0});return L(this,Si)[Si](t)}reset(){this.cancelAll()}logout(){this.iteratePlugins(e=>{e.provider&&e.provider.logout&&e.provider.logout()})}calculateProgress(e,t){if(!this.getFile(e.id)){this.log(`Not setting progress for a file that has been removed: ${e.id}`);return}let r=Number.isFinite(t.bytesTotal)&&t.bytesTotal>0;this.setFileState(e.id,{progress:{...this.getFile(e.id).progress,bytesUploaded:t.bytesUploaded,bytesTotal:t.bytesTotal,percentage:r?Math.round(t.bytesUploaded/t.bytesTotal*100):0}}),this.calculateTotalProgress()}calculateTotalProgress(){let t=this.getFiles().filter(c=>c.progress.uploadStarted||c.progress.preprocess||c.progress.postprocess);if(t.length===0){this.emit("progress",0),this.setState({totalProgress:0});return}let r=t.filter(c=>c.progress.bytesTotal!=null),s=t.filter(c=>c.progress.bytesTotal==null);if(r.length===0){let c=t.length*100,u=s.reduce((m,b)=>m+b.progress.percentage,0),d=Math.round(u/c*100);this.setState({totalProgress:d});return}let n=r.reduce((c,u)=>c+u.progress.bytesTotal,0),o=n/r.length;n+=o*s.length;let a=0;r.forEach(c=>{a+=c.progress.bytesUploaded}),s.forEach(c=>{a+=o*(c.progress.percentage||0)/100});let l=n===0?0:Math.round(a/n*100);l>100&&(l=100),this.setState({totalProgress:l}),this.emit("progress",l)}updateOnlineStatus(){(typeof window.navigator.onLine!="undefined"?window.navigator.onLine:!0)?(this.emit("is-online"),this.wasOffline&&(this.emit("back-online"),this.info(this.i18n("connectedToInternet"),"success",3e3),this.wasOffline=!1)):(this.emit("is-offline"),this.info(this.i18n("noInternetConnection"),"error",0),this.wasOffline=!0)}getID(){return this.opts.id}use(e,t){if(typeof e!="function"){let o=`Expected a plugin class, but got ${e===null?"null":typeof e}. Please verify that the plugin was imported and spelled correctly.`;throw new TypeError(o)}let r=new e(this,t),s=r.id;if(!s)throw new Error("Your plugin must have an id");if(!r.type)throw new Error("Your plugin must have a type");let n=this.getPlugin(s);if(n){let o=`Already found a plugin named '${n.id}'. Tried to use: '${s}'.
+  7: ⟪ 22596 characters skipped ⟫arget is not a Plugin class. Please check that you're not specifying a React Component instead of a plugin. If you are using @uppy/* packages directly, make sure you have only 1 version of @uppy/core installed: run `npm ls @uppy/core` on the command line and verify that all the versions match and are deduped correctly.":o+="If you meant to target an HTML element, please make sure that the element exists. Check that the <script> tag initializing Uppy is right before the closing </body> tag at the end of the page. (see https://github.com/transloadit/uppy/issues/1042)\n\nIf you meant to target a plugin, please confirm that your `import` statements or `require` calls are correct.",new Error(o)}update(e){if(this.el!=null){var t,r;(t=(r=Fp(this,dn))[dn])==null||t.call(r,e)}}unmount(){if(this.isTargetDOMEl){var e;(e=this.el)==null||e.remove()}this.onUnmount()}onMount(){}onUnmount(){}};Cp.exports=yo});var ye=g((dD,Kr)=>{"use strict";var Rp=Zd(),q3=xp(),L3=Mt(),{debugLogger:j3}=Nl();Kr.exports=Rp;Kr.exports.Uppy=Rp;Kr.exports.UIPlugin=q3;Kr.exports.BasePlugin=L3;Kr.exports.debugLogger=j3});var vr=g((pD,Tp)=>{var Op=class extends Error{constructor(e,t){t===void 0&&(t=null);super("This looks 
+  8  
+
+public/js/app.js:
+  1  /*! For license information please see app.js.LICENSE.txt */
+  2: ⟪ 315386 characters skipped ⟫=document.createTextNode(i),a=r.element.childNodes;a[o]&&r.element.removeChild(a[o]),a.length?r.element.insertBefore(s,a[o]):r.element.appendChild(s)}}}(e,t)}}),void 0);var k={install:function e(t){e.installed||(e.installed=!0,t.component("VueEditor",w))},version:"2.10.3",Quill:i.a,VueEditor:w},M=null;"undefined"!=typeof window?M=window.Vue:void 0!==e&&(M=e.Vue),M&&M.use(k)}).call(this,n(10))},function(e,t,n){"use strict";n.d(t,"a",(function(){return de}));var r=n(9),i=n.n(r);function o(e){return(o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function s(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function a(e){return function(e){if(Array.isArray(e)){for(var t=0,n=new Array(e.length);t<e.length;t++)n[t]=e[t];return n}}(e)||function(e){if(Symbol.iterator in Object(e)||"[object Arguments]"===Object.prototype.toString.call(e))return Array.from(e)}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance")}()}function l(){return"undefined"!=typeof Refl⟪ 521380 characters skipped ⟫n,e.observable=e=>(Oe(e),e),e.options=Object.create(null),R.forEach(t=>{e.options[t+"s"]=Object.create(null)}),e.options._base=e,D(e.options.components,yr),function(e){e.use=function(e){const t=this._installedPlugins||(this._installedPlugins=[]);if(t.indexOf(e)>-1)return this;const n=j(arguments,1);return n.unshift(this),u(e.install)?e.install.apply(e,n):u(e)&&e.apply(null,n),t.push(e),this}}(e),function(e){e.mixin=function(e){return this.options=ir(this.options,e),this}}(e),function(e){e.cid=0;let t=1;e.extend=function(e){e=e||{};const n=this,r=n.cid,i=e._Ctor||(e._Ctor={});if(i[r])return i[r];const o=Bn(e)||Bn(n.options),s=function(e){this._init(e)};return(s.prototype=Object.create(n.prototype)).constructor=s,s.cid=t++,s.options=ir(n.options,e),s.super=n,s.options.props&&function(e){const t=e.options.props;for(const n in t)qn(e.prototype,"_props",n)}(s),s.options.computed&&function(e){const t=e.options.computed;for(const n in t)An(e.prototype,n,t[n])}(s),s.extend=n.extend,s.mixin=n.mixin,s.use=n.use,R.forEach((function(e){s[e]=n[e]})),o&&(s.options.components[o]=s),s.superOptions=n.options,s.extendOptions=e,s.sealedOptions=D({},s.options),i[r]=s,s}}(e),function(e){R.forEach(t=>{e[t]=function(e,n){return 
+
+public/vendor/optionbuilder/js/summernote-lite.min.js:
+  1  /*! For license information please see summernote-lite.min.js.LICENSE.txt */
+  2: ⟪ 7135 characters skipped ⟫:!h&&/webkit/i.test(c),isChrome:!h&&/chrome/i.test(c),isSafari:!h&&/safari/i.test(c)&&!/chrome/i.test(c),browserVersion:l,jqueryVersion:parseFloat(i.a.fn.jquery),isSupportAmd:r,isSupportTouch:f,isFontInstalled:function(t){var e="Comic Sans MS"===t?"Courier New":"Comic Sans MS",n=document.createElement("canvas").getContext("2d");n.font="200px '"+e+"'";var o=n.measureText("mmmmmmmmmmwwwww").width;return n.font="200px "+s(t)+', "'+e+'"',o!==n.measureText("mmmmmmmmmmwwwww").width},isW3CRangeSupport:!!document.createRange,inputEventName:p,genericFontFamilies:a,validFontName:s};var v=0;var g={eq:function(t){return function(e){return t===e}},eq2:function(t,e){return t===e},peq2:function(t){return function(e,n){return e[t]===n[t]}},ok:function(){return!0},fail:function(){return!1},self:function(t){return t},not:function(t){return function(){return!t.apply(t,arguments)}},and:function(t,e){return function(n){return t(n)&&e(n)}},invoke:function(t,e){return function(){return t[e].apply(t,arguments)}},resetUniqueId:function(){v=0},uniqueId:function(t){var e=++v+"";return t?t+e:e},rect2bnd:function(t){var e=i()(document);return{top:t.top+e.scrollTop(),left:t.left+e.scrollLeft(),width:t.right-t.l⟪ 77570 characters skipped ⟫his.options.container,this.ui.button(t)}},{key:"initialize",value:function(){this.addToolbarButtons(),this.addImagePopoverButtons(),this.addLinkPopoverButtons(),this.addTablePopoverButtons(),this.fontInstalledMap={}}},{key:"destroy",value:function(){delete this.fontInstalledMap}},{key:"isFontInstalled",value:function(t){return Object.prototype.hasOwnProperty.call(this.fontInstalledMap,t)||(this.fontInstalledMap[t]=m.isFontInstalled(t)||C.contains(this.options.fontNamesIgnoreCheck,t)),this.fontInstalledMap[t]}},{key:"isFontDeservedToAdd",value:function(t){return""!==(t=t.toLowerCase())&&this.isFontInstalled(t)&&-1===m.genericFontFamilies.indexOf(t)}},{key:"colorPalette",value:function(t,e,n,o){var r=this;return this.ui.buttonGroup({className:"note-color "+t,children:[this.button({className:"note-current-color-button",contents:this.ui.icon(this.options.icons.font+" note-recent-color"),tooltip:e,click:function(t){var e=i()(t.currentTarget);n&&o?r.context.invoke("editor.color",{backColor:e.attr("data-backColor"),foreColor:e.attr("data-foreColor")}):n?r.context.invoke("editor.color",{backColor:e.attr("data-backColor")}):o&&r.context.invoke("editor.color",{foreColor:e.attr("data-foreColor")})},callback:function(t){var e=t.find(".note-recent-color");n&&(e.css("background-color",r.options.colorButton.backColor),t.attr("data-backColor",r.options.colorButton.backColor)),o?(e.css("color",r.options.colorButton.foreColor),t.attr("data-foreColor",r.options.colorButton.foreColor)):e.css("color","transparent")}}),this.button({className:"dropdown-toggle",contents:this.ui.dropdownButtonContents(⟪ 6719 characters skipped ⟫an>',t.options),tooltip:t.lang.font.name,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className:"dropdown-fontname",checkClassName:t.options.icons.menuCheck,items:t.options.fontNames.filter(t.isFontInstalled.bind(t)),title:t.lang.font.name,template:function(t){return'<span style="font-family: '+m.validFontName(t)+'">'+t+"</span>"},click:t.context.createInvokeHandlerAndUpdateState("editor.fontName")})]).render()})),this.context.memo("button.fontsize",(function(){return t.ui.buttonGroup([t.button({className:"dropdown-toggle",contents:t.ui.dropdownButtonContents('<span class="note-current-fontsize"></span>',t.options),tooltip:t.lang.font.size,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className:"dropdown-fontsize",checkClassName:t.options.icons.menuCheck,items:t.options.fontSizes,title:t.lang.font.size,click:t.context.createInvokeHandlerAndUpdateState("editor.fontSize")})]).render()})),this.context.memo("button.fontsizeunit",(function(){return t.ui.buttonGroup([t.button({className:"dropdown-toggle",contents:t.ui.dropdownButtonContents('<span class="note-current-fontsizeunit"></span>',t.options),tooltip:t.lang.font.sizeunit,data:{toggle:"dropdown"}}),t.ui.dropdownCheck({className⟪ 11397 characters skipped ⟫hrough"===o["font-strikethrough"]}}),o["font-family"]){var r=o["font-family"].split(",").map((function(t){return t.replace(/[\'\"]/g,"").replace(/\s+$/,"").replace(/^\s+/,"")})),a=C.find(r,this.isFontInstalled.bind(this));n.find(".dropdown-fontname a").each((function(t,e){var n=i()(e),o=n.data("value")+""==a+"";n.toggleClass("checked",o)})),n.find(".note-current-fontname").text(a).css("font-family",a)}if(o["font-size"]){var s=o["font-size"];n.find(".dropdown-fontsize a").each((function(t,e){var n=i()(e),o=n.data("value")+""==s+"";n.toggleClass("checked",o)})),n.find(".note-current-fontsize").text(s);var l=o["font-size-unit"];n.find(".dropdown-fontsizeunit a").each((function(t,e){var n=i()(e),o=n.data("value")+""==l+"";n.toggleClass("checked",o)})),n.find(".note-current-fontsizeunit").text(l)}if(o["line-height"]){var c=o["line-height"];n.find(".dropdown-line-height li a").each((function(t,n){var o=i()(n).data("value")+""==c+"";e.className=o?"checked":""}))}}},{key:"updateBtnStates",value:function(t,e){var n=this;i.a.each(e,(function(e,o){n.ui.toggleBtnActive(t.find(e),o())}))}},{key:"tableMoveHandler",value:function(t){var e,n=i()(t.target.parentNode),o=n.next(),r=n.find(".note-dime
+
+resources/json/test.json:
+      2    "en": {
+      3: ⟪ 19862 characters skipped ⟫":\"Message\",\"waiting\":\"Waiting\",\"closed\":\"Closed\",\"topic\":\"Topic\",\"document\":\"Document\",\"home\":\"Home\",\"module_version\":\"Module Version\",\"purchase_code\":\"Purchase Code\",\"installed_domain\":\"Installed Domain\",\"system_activated_date\":\"System Activated Date\",\"check_update\":\"Check Update\",\"view_note\":\"View Note\",\"class_name\":\"Class Name\",\"student_list\":\"Student List\",\"select_month\":\"Select Month\",\"national_id_card\":\"National Id Card\",\"national_id_number\":\"National Id Number\",\"delete_custom_field\":\"Delete Custom Field\",\"birth_certificate_number\":\"Birth Certificate Number\",\"email_address\":\"Email Address\",\"academic_year\":\"Academic Year\",\"class_sec\":\"Class(Section)\",\"language\":\"Language\",\"select_language\":\"Select Language\",\"select_class\":\"Select Class\",\"select_subject\":\"Select Subject\",\"select_subjects\":\"Select Subjects\",\"select_teacher\":\"Select Teacher\",\"select_item\":\"Select Item\",\"select_exam\":\"Select Exam\",\"select_type\":\"Select Type\",\"select_lesson\":\"Select Lesson\",\"select_academic_year\":\"Select Academic Year\",\"select_student\":\"Select Student\",\"select_exam_type\":\"Select Exam
+      4      "php": {
+
+    710          "purchase_code": "Purchase Code",
+    711:         "installed_domain": "Installed Domain",
+    712          "system_activated_date": "System Activated Date",
+
+   3960    "bn": {
+   3961: ⟪ 54093 characters skipped ⟫\\u09be \\u09b9\\u09df\\u09c7\\u099b\\u09c7\",\"topic\":\"\\u09ac\\u09bf\\u09b7\\u09df\",\"module_version\":\"\\u09ae\\u09a1\\u09bf\\u0989\\u09b2 \\u09b8\\u0982\\u09b8\\u09cd\\u0995\\u09b0\\u09a3\",\"installed_domain\":\"\\u0987\\u09a8\\u09b8\\u09cd\\u099f\\u09b2 \\u0995\\u09b0\\u09be \\u09a1\\u09cb\\u09ae\\u09c7\\u0987\\u09a8\",\"view_note\":\"\\u09a8\\u09cb\\u099f \\u09a6\\u09c7\\u0996\\u09be\\u0993\",\"class_name\":\"\\u0995\\u09cd\\u09b2\\u09be\\u09b8 \\u09a8\\u09be\\u09ae\",\"student_list\":\"\\u099b\\u09be\\u09a4\\u09cd\\u09b0 \\u09a4\\u09be\\u09b2\\u09bf\\u0995\\u09be\",\"national_id_card\":\"\\u099c\\u09be\\u09a4\\u09c0\\u09df \\u09aa\\u09b0\\u09bf\\u099a\\u09df \\u09aa\\u09a4\\u09cd\\u09b0\",\"national_id_number\":\"\\u099c\\u09be\\u09a4\\u09c0\\u09af\\u09bc \\u0986\\u0987\\u09a1\\u09bf \\u0995\\u09be\\u09b0\\u09cd\\u09a1\",\"delete_custom_field\":\"\\u09b8\\u09cd\\u09ac\\u09a8\\u09bf\\u09b0\\u09cd\\u09a7\\u09be\\u09b0\\u09bf\\u09a4 \\u0995\\u09cd\\u09b7\\u09c7\\u09a4\\u09cd\\u09b0 \\u09ae\\u09c1\\u099b\\u09c7 \\u09ab\\u09c7\\u09b2\\u09c1\\u09a8\",\"birth_certificate_number\":\"\\u09ac\\u09be\\u09b0\\u09cd\\u09a5 \\u09b8\\u09be\\u09b0\\u09cd\\u099f\\u09bf\\u09ab\\u09bf\\u0
+   3962      "php": {
+
+   4516          "module_version": "\u09ae\u09a1\u09bf\u0989\u09b2 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3",
+   4517:         "installed_domain": "\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be \u09a1\u09cb\u09ae\u09c7\u0987\u09a8",
+   4518          "view_note": "\u09a8\u09cb\u099f \u09a6\u09c7\u0996\u09be\u0993",
+
+   7377    "es": {
+   7378: ⟪ 19370 characters skipped ⟫Esperando\",\"closed\":\"Cerrado\",\"topic\":\"Tema\",\"document\":\"Documento\",\"home\":\"Casa\",\"module_version\":\"Versi\\u00f3n del m\\u00f3dulo\",\"purchase_code\":\"C\\u00f3digo de compra\",\"installed_domain\":\"Dominio instalado\",\"system_activated_date\":\"Fecha de activaci\\u00f3n del sistema\",\"check_update\":\"Comprobar actualizaci\\u00f3n\",\"view_note\":\"Ver nota\",\"class_name\":\"Nombre de clase\",\"student_list\":\"Lista de estudiantes\",\"select_month\":\"Seleccione Mes\",\"national_id_card\":\"Tarjeta de identidad nacional\",\"national_id_number\":\"Tarjeta de identidad nacional\",\"delete_custom_field\":\"Suprimir campo personalizado\",\"birth_certificate_number\":\"N\\u00famero de certificado de nacimiento\",\"email_address\":\"Direcci\\u00f3n electr\\u00f3nica\",\"academic_year\":\"A\\u00f1o acad\\u00e9mico\",\"class_sec\":\"Clase (Secci\\u00f3n)\",\"language\":\"Lengua\",\"select_language\":\"Seleccionar idioma\",\"select_class\":\"Seleccionar clase\",\"select_subject\":\"Seleccionar asunto\",\"select_subjects\":\"Seleccionar temas\",\"select_teacher\":\"Seleccionar profesor\",\"select_item\":\"Seleccionar elemento\",\"select_exam\":\"Seleccionar examen\
+   7379      "php": {
+
+   7913          "purchase_code": "C\u00f3digo de compra",
+   7914:         "installed_domain": "Dominio instalado",
+   7915          "system_activated_date": "Fecha de activaci\u00f3n del sistema",
+
+  11055    "fr": {
+  11056: ⟪ 23057 characters skipped ⟫waiting\":\"En attente\",\"closed\":\"Ferm\\u00e9\",\"topic\":\"Rubrique\",\"document\":\"Document\",\"home\":\"Accueil\",\"module_version\":\"Version du module\",\"purchase_code\":\"Code d'achat\",\"installed_domain\":\"Domaine install\\u00e9\",\"system_activated_date\":\"Date d'activation du syst\\u00e8me\",\"check_update\":\"V\\u00e9rifier le point\",\"view_note\":\"Afficher la note\",\"class_name\":\"Nom de classe\",\"student_list\":\"Liste des \\u00e9tudiants\",\"select_month\":\"S\\u00e9lectionner un mois\",\"national_id_card\":\"Carte d'identit\\u00e9 nationale\",\"national_id_number\":\"Carte d'identit\\u00e9 nationale\",\"delete_custom_field\":\"Supprimer une zone personnalis\\u00e9e\",\"birth_certificate_number\":\"Num\\u00e9ro de certificat de naissance\",\"email_address\":\"Adresse \\u00e9lectronique\",\"academic_year\":\"Ann\\u00e9e universitaire\",\"class_sec\":\"Classe (section)\",\"language\":\"Langue\",\"select_language\":\"S\\u00e9lectionner une langue\",\"select_class\":\"S\\u00e9lectionner une classe\",\"select_subject\":\"S\\u00e9lectionner le sujet\",\"select_subjects\":\"S\\u00e9lectionner des sujets\",\"select_teacher\":\"S\\u00e9lectionner l'enseignant\",\"
+  11057      "php": {
+
+  11674          "purchase_code": "Code d'achat",
+  11675:         "installed_domain": "Domaine install\u00e9",
+  11676          "system_activated_date": "Date d'activation du syst\u00e8me",
+
+resources/lang/ar/common.php:
+  91      "purchase_code" => "Purchase Code",
+  92:     "installed_domain" => "Installed Domain",
+  93      "system_activated_date" => "System Activated Date",
+
+resources/lang/be/common.php:
+  91      'purchase_code'=>'Purchase Code',
+  92:     'installed_domain'=>'Installed Domain',
+  93      'system_activated_date'=>'System Activated Date',
+
+resources/lang/bn/common.php:
+  13      "module_version" => "মডিউল সংস্করণ",
+  14:     "installed_domain" => "ইনস্টল করা ডোমেইন",
+  15      "view_note" => "নোট দেখাও",
+
+resources/lang/ca/common.php:
+  88      'purchase_code'=>'Purchase Code',
+  89:     'installed_domain'=>'Installed Domain',
+  90      'system_activated_date'=>'System Activated Date',
+
+resources/lang/en/common.php:
+  91      "purchase_code" => "Purchase Code",
+  92:     "installed_domain" => "Installed Domain",
+  93      "system_activated_date" => "System Activated Date",
+
+resources/lang/es/common.php:
+  84  
+  85: "installed_domain" => "Dominio instalado",
+  86  
+
+resources/lang/fr/common.php:
+  84  
+  85: "installed_domain" => "Domaine installé",
+  86  
+
+resources/views/vendors/service/install/license.blade.php:
+  29                          <div class="form-group">
+  30:                             <label class="required" for="installed_domain">{{ __('service::install.installed_domain') }}</label>
+  31:                             <input type="text" class="form-control" name="installed_domain" id="installed_domain" required="required" readonly value="{{ app_url() }}" >
+  32                          </div>
+
+resources/views/vendors/service/update/index.blade.php:
+  19                                      <tr>
+  20:                                         <td>Current Installed Version</td>
+  21                                          <td>{{ gv($product, 'current_version') }}</td>
+
+  87                                      <tr>
+  88:                                         <td>Current Installed Version</td>
+  89                                          <td>{{ gv($product, 'current_version') }}</td>
+
+vendor/ankitpokhrel/tus-php/README.md:
+  433  Make sure that [docker](https://docs.docker.com/engine/installation/) and [docker-compose](https://docs.docker.com/compose/install/)
+  434: are installed in your system. Then, run docker script from project root.
+  435  ```shell
+
+vendor/barryvdh/laravel-dompdf/CHANGELOG.md:
+  36  > - Improves border, outline, and background rendering for inline elements
+  37: > - Switches installed fonts and font metrics cache file format to JSON
+  38  > - Adds support for the inset CSS shorthand property and the legacy break-word keyword for word-break
+
+vendor/brick/math/CHANGELOG.md:
+  260  
+  261: - When installed with `--no-dev`, the autoloader does not autoload tests anymore
+  262  - Tests and other files unnecessary for production are excluded from the dist package
+
+vendor/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine/CarbonTypeConverter.php:
+  21      /**
+  22:      * This property differentiates types installed by carbonphp/carbon-doctrine-types
+  23       * from the ones embedded previously in nesbot/carbon source directly.
+
+vendor/clue/stream-filter/README.md:
+  217  Please note that not all filter functions may be available depending 
+  218: on installed PHP extensions and the PHP version in use.
+  219  In particular, [HHVM](https://hhvm.com/) may not offer the same filter functions
+
+vendor/clue/stream-filter/src/functions.php:
+  205   * Please note that not all filter functions may be available depending
+  206:  * on installed PHP extensions and the PHP version in use.
+  207   * In particular, [HHVM](https://hhvm.com/) may not offer the same filter functions
+
+vendor/composer/autoload_classmap.php:
+   1169      'Complex\\Operations' => $vendorDir . '/markbaker/complex/classes/src/Operations.php',
+   1170:     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+   1171      'Composer\\Semver\\Comparator' => $vendorDir . '/composer/semver/src/Comparator.php',
+
+  10516      'Twilio\\Rest\\Preview\\Marketplace\\AvailableAddOn\\AvailableAddOnExtensionPage' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/AvailableAddOn/AvailableAddOnExtensionPage.php',
+  10517:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnContext' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnContext.php',
+  10518:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnInstance' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnInstance.php',
+  10519:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnList' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnList.php',
+  10520:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnOptions' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnOptions.php',
+  10521:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnPage' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnPage.php',
+  10522:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOn\\InstalledAddOnExtensionContext' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionContext.php',
+  10523:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOn\\InstalledAddOnExtensionInstance' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionInstance.php',
+  10524:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOn\\InstalledAddOnExtensionList' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionList.php',
+  10525:     'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOn\\InstalledAddOnExtensionPage' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionPage.php',
+  10526      'Twilio\\Rest\\Preview\\Sync' => $vendorDir . '/twilio/sdk/src/Twilio/Rest/Preview/Sync.php',
+
+vendor/composer/autoload_static.php:
+   2117          'Complex\\Operations' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Operations.php',
+   2118:         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+   2119          'Composer\\Semver\\Comparator' => __DIR__ . '/..' . '/composer/semver/src/Comparator.php',
+
+  11464          'Twilio\\Rest\\Preview\\Marketplace\\AvailableAddOn\\AvailableAddOnExtensionPage' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/AvailableAddOn/AvailableAddOnExtensionPage.php',
+  11465:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnContext' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnContext.php',
+  11466:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnInstance' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnInstance.php',
+  11467:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnList' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnList.php',
+  11468:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnOptions' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnOptions.php',
+  11469:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOnPage' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnPage.php',
+  11470:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOn\\InstalledAddOnExtensionContext' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionContext.php',
+  11471:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOn\\InstalledAddOnExtensionInstance' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionInstance.php',
+  11472:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOn\\InstalledAddOnExtensionList' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionList.php',
+  11473:         'Twilio\\Rest\\Preview\\Marketplace\\InstalledAddOn\\InstalledAddOnExtensionPage' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionPage.php',
+  11474          'Twilio\\Rest\\Preview\\Sync' => __DIR__ . '/..' . '/twilio/sdk/src/Twilio/Rest/Preview/Sync.php',
+
+vendor/composer/InstalledVersions.php:
+   18  /**
+   19:  * This class is copied in every Composer installed project and available to all
+   20   *
+   21:  * See also https://getcomposer.org/doc/07-runtime.md#installed-versions
+   22   *
+
+   26   */
+   27: class InstalledVersions
+   28  {
+
+   32       */
+   33:     private static $installed;
+   34  
+
+   43       */
+   44:     private static $installedByVendor = array();
+   45  
+   46      /**
+   47:      * Returns a list of all package names which are present, either by being installed, replaced or provided
+   48       *
+
+   51       */
+   52:     public static function getInstalledPackages()
+   53      {
+   54          $packages = array();
+   55:         foreach (self::getInstalled() as $installed) {
+   56:             $packages[] = array_keys($installed['versions']);
+   57          }
+
+   72       */
+   73:     public static function getInstalledPackagesByType($type)
+   74      {
+
+   76  
+   77:         foreach (self::getInstalled() as $installed) {
+   78:             foreach ($installed['versions'] as $name => $package) {
+   79                  if (isset($package['type']) && $package['type'] === $type) {
+
+   88      /**
+   89:      * Checks whether the given package is installed
+   90       *
+
+   96       */
+   97:     public static function isInstalled($packageName, $includeDevRequirements = true)
+   98      {
+   99:         foreach (self::getInstalled() as $installed) {
+  100:             if (isset($installed['versions'][$packageName])) {
+  101:                 return $includeDevRequirements || !isset($installed['versions'][$packageName]['dev_requirement']) || $installed['versions'][$packageName]['dev_requirement'] === false;
+  102              }
+
+  110       *
+  111:      * e.g. If you want to know whether version 2.3+ of package foo/bar is installed, you would call:
+  112       *
+  113:      *   Composer\InstalledVersions::satisfies(new VersionParser, 'foo/bar', '^2.3')
+  114       *
+
+  128      /**
+  129:      * Returns a version constraint representing all the range(s) which are installed for a given package
+  130       *
+  131:      * It is easier to use this via isInstalled() with the $constraint argument if you need to check
+  132:      * whether a given version of a package is installed, and not just whether it exists
+  133       *
+
+  138      {
+  139:         foreach (self::getInstalled() as $installed) {
+  140:             if (!isset($installed['versions'][$packageName])) {
+  141                  continue;
+
+  144              $ranges = array();
+  145:             if (isset($installed['versions'][$packageName]['pretty_version'])) {
+  146:                 $ranges[] = $installed['versions'][$packageName]['pretty_version'];
+  147              }
+  148:             if (array_key_exists('aliases', $installed['versions'][$packageName])) {
+  149:                 $ranges = array_merge($ranges, $installed['versions'][$packageName]['aliases']);
+  150              }
+  151:             if (array_key_exists('replaced', $installed['versions'][$packageName])) {
+  152:                 $ranges = array_merge($ranges, $installed['versions'][$packageName]['replaced']);
+  153              }
+  154:             if (array_key_exists('provided', $installed['versions'][$packageName])) {
+  155:                 $ranges = array_merge($ranges, $installed['versions'][$packageName]['provided']);
+  156              }
+
+  160  
+  161:         throw new \OutOfBoundsException('Package "' . $packageName . '" is not installed');
+  162      }
+
+  165       * @param  string      $packageName
+  166:      * @return string|null If the package is being replaced or provided but is not really installed, null will be returned as version, use satisfies or getVersionRanges if you need to know if a given version is present
+  167       */
+
+  169      {
+  170:         foreach (self::getInstalled() as $installed) {
+  171:             if (!isset($installed['versions'][$packageName])) {
+  172                  continue;
+
+  174  
+  175:             if (!isset($installed['versions'][$packageName]['version'])) {
+  176                  return null;
+
+  178  
+  179:             return $installed['versions'][$packageName]['version'];
+  180          }
+  181  
+  182:         throw new \OutOfBoundsException('Package "' . $packageName . '" is not installed');
+  183      }
+
+  186       * @param  string      $packageName
+  187:      * @return string|null If the package is being replaced or provided but is not really installed, null will be returned as version, use satisfies or getVersionRanges if you need to know if a given version is present
+  188       */
+
+  190      {
+  191:         foreach (self::getInstalled() as $installed) {
+  192:             if (!isset($installed['versions'][$packageName])) {
+  193                  continue;
+
+  195  
+  196:             if (!isset($installed['versions'][$packageName]['pretty_version'])) {
+  197                  return null;
+
+  199  
+  200:             return $installed['versions'][$packageName]['pretty_version'];
+  201          }
+  202  
+  203:         throw new \OutOfBoundsException('Package "' . $packageName . '" is not installed');
+  204      }
+
+  207       * @param  string      $packageName
+  208:      * @return string|null If the package is being replaced or provided but is not really installed, null will be returned as reference
+  209       */
+
+  211      {
+  212:         foreach (self::getInstalled() as $installed) {
+  213:             if (!isset($installed['versions'][$packageName])) {
+  214                  continue;
+
+  216  
+  217:             if (!isset($installed['versions'][$packageName]['reference'])) {
+  218                  return null;
+
+  220  
+  221:             return $installed['versions'][$packageName]['reference'];
+  222          }
+  223  
+  224:         throw new \OutOfBoundsException('Package "' . $packageName . '" is not installed');
+  225      }
+
+  228       * @param  string      $packageName
+  229:      * @return string|null If the package is being replaced or provided but is not really installed, null will be returned as install path. Packages of type metapackages also have a null install path.
+  230       */
+
+  232      {
+  233:         foreach (self::getInstalled() as $installed) {
+  234:             if (!isset($installed['versions'][$packageName])) {
+  235                  continue;
+
+  237  
+  238:             return isset($installed['versions'][$packageName]['install_path']) ? $installed['versions'][$packageName]['install_path'] : null;
+  239          }
+  240  
+  241:         throw new \OutOfBoundsException('Package "' . $packageName . '" is not installed');
+  242      }
+
+  249      {
+  250:         $installed = self::getInstalled();
+  251  
+  252:         return $installed[0]['root'];
+  253      }
+
+  255      /**
+  256:      * Returns the raw installed.php data for custom implementations
+  257       *
+
+  265  
+  266:         if (null === self::$installed) {
+  267:             // only require the installed.php file if this file is loaded from its dumped location,
+  268              // and not from its source location in the composer/composer package, see https://github.com/composer/composer/issues/9937
+  269              if (substr(__DIR__, -8, 1) !== 'C') {
+  270:                 self::$installed = include __DIR__ . '/installed.php';
+  271              } else {
+  272:                 self::$installed = array();
+  273              }
+
+  275  
+  276:         return self::$installed;
+  277      }
+
+  279      /**
+  280:      * Returns the raw data of all installed.php which are currently loaded for custom implementations
+  281       *
+
+  286      {
+  287:         return self::getInstalled();
+  288      }
+
+  294       * this class but then also needs to execute another project's autoloader in process,
+  295:      * and wants to ensure both projects have access to their version of installed.php.
+  296       *
+
+  298       * the data it needs from this class, then call reload() with
+  299:      * `require $CWD/vendor/composer/installed.php` (or similar) as input to make sure
+  300       * the project in which it runs can then also use this class safely, without
+
+  302       *
+  303:      * @param  array[] $data A vendor/composer/installed.php data set
+  304       * @return void
+
+  309      {
+  310:         self::$installed = $data;
+  311:         self::$installedByVendor = array();
+  312      }
+
+  317       */
+  318:     private static function getInstalled()
+  319      {
+
+  323  
+  324:         $installed = array();
+  325  
+
+  327              foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
+  328:                 if (isset(self::$installedByVendor[$vendorDir])) {
+  329:                     $installed[] = self::$installedByVendor[$vendorDir];
+  330:                 } elseif (is_file($vendorDir.'/composer/installed.php')) {
+  331                      /** @var array{root: array{name: string, pretty_version: string, version: string, reference: string|null, type: string, install_path: string, aliases: string[], dev: bool}, versions: array<string, array{pretty_version?: string, version?: string, reference?: string|null, type?: string, install_path?: string, aliases?: string[], dev_requirement: bool, replaced?: string[], provided?: string[]}>} $required */
+  332:                     $required = require $vendorDir.'/composer/installed.php';
+  333:                     $installed[] = self::$installedByVendor[$vendorDir] = $required;
+  334:                     if (null === self::$installed && strtr($vendorDir.'/composer', '\\', '/') === strtr(__DIR__, '\\', '/')) {
+  335:                         self::$installed = $installed[count($installed) - 1];
+  336                      }
+
+  340  
+  341:         if (null === self::$installed) {
+  342:             // only require the installed.php file if this file is loaded from its dumped location,
+  343              // and not from its source location in the composer/composer package, see https://github.com/composer/composer/issues/9937
+
+  345                  /** @var array{root: array{name: string, pretty_version: string, version: string, reference: string|null, type: string, install_path: string, aliases: string[], dev: bool}, versions: array<string, array{pretty_version?: string, version?: string, reference?: string|null, type?: string, install_path?: string, aliases?: string[], dev_requirement: bool, replaced?: string[], provided?: string[]}>} $required */
+  346:                 $required = require __DIR__ . '/installed.php';
+  347:                 self::$installed = $required;
+  348              } else {
+  349:                 self::$installed = array();
+  350              }
+
+  352  
+  353:         if (self::$installed !== array()) {
+  354:             $installed[] = self::$installed;
+  355          }
+  356  
+  357:         return $installed;
+  358      }
+
+vendor/craftsys/msg91-laravel/README.md:
+  35  
+  36: The packages is available on [Packagist](https://packagist.org/packages/craftsys/msg91-laravel) and can be installed via [Composer](https://getcomposer.org/) by executing following command in shell.
+  37  
+
+vendor/craftsys/msg91-php/README.md:
+  48  
+  49: The packages is available on [Packagist](https://packagist.org/packages/craftsys/msg91-php) and can be installed via [Composer](https://getcomposer.org/) by executing following command in shell.
+  50  
+
+vendor/defuse/php-encryption/dist/Makefile:
+  1  # This builds defuse-crypto.phar. To run this Makefile, `box` and `composer`
+  2: # must be installed and in your $PATH. Run it from inside the dist/ directory.
+  3  
+
+vendor/defuse/php-encryption/docs/InternalDeveloperDocs.md:
+  14  Development is done on Linux. To run the tests, you will need to have the
+  15: following tools installed:
+  16  
+
+  97  
+  98: Once you have those tools installed and the key available follow these steps:
+  99  
+
+vendor/doctrine/common/docs/en/reference/class-loading.rst:
+   97  ``ClassLoader#loadClass`` to see how simple and efficient the class
+   98: loading is. The iteration over the installed class loaders happens
+   99  in C (with the exception of using ``ClassLoader::classExists``).
+
+  195  alternative exists for the cases in which you really want to ask
+  196: all installed class loaders whether they can load the class:
+  197  ``ClassLoader::classExists($className)``:
+
+  207  This static method can basically be used as a drop-in replacement
+  208: for class_exists(..., true). It iterates over all installed class
+  209  loaders and asks each of them via ``canLoadClass``, returning early
+
+vendor/doctrine/common/src/ClassLoader.php:
+   25   * A <tt>ClassLoader</tt> is an autoloader for class files that can be
+   26:  * installed on the SPL autoload stack. It is a class loader that either loads only classes
+   27   * of a specific namespace or all namespaces and it is suitable for working together
+
+  229       *
+  230:      * Note that, depending on what kinds of autoloaders are installed on the SPL
+  231       * autoload stack, the class (file) might already be loaded as a result of checking
+
+vendor/doctrine/dbal/src/Tools/Console/ConsoleRunner.php:
+   4  
+   5: use Composer\InstalledVersions;
+   6  use Doctrine\DBAL\Tools\Console\Command\ReservedWordsCommand;
+
+  31      {
+  32:         $version = InstalledVersions::getVersion('doctrine/dbal');
+  33          assert($version !== null);
+
+vendor/doctrine/deprecations/lib/Doctrine/Deprecations/Deprecation.php:
+  113       *
+  114:      * "Outside" means we assume that $package is currently installed as a
+  115       * dependency and the caller is not a file in that package. When $package
+  116:      * is installed as a root package then deprecations triggered from the
+  117       * tests folder are also considered "outside".
+
+vendor/dompdf/dompdf/README.md:
+  77  
+  78: The [DejaVu TrueType fonts](https://dejavu-fonts.github.io/) have been pre-installed
+  79  to give dompdf decent Unicode character coverage by default. To use the DejaVu
+
+vendor/dompdf/dompdf/lib/Cpdf.php:
+  5564          if (!function_exists("imagepng")) {
+  5565:             throw new \Exception("The PHP GD extension is required, but is not installed.");
+  5566          }
+
+  5812          if (!function_exists("imagecreatefrompng")) {
+  5813:             throw new \Exception("The PHP GD extension is required, but is not installed.");
+  5814          }
+
+vendor/dompdf/dompdf/src/FontMetrics.php:
+   14   * This class provides information about fonts and text.  It can resolve
+   15:  * font names into actual installed font files, as well as determine the
+   16   * size of text in a particular font and size.
+
+   31       */
+   32:     const USER_FONTS_FILE = "installed-fonts.json";
+   33  
+
+  114      {
+  115:         $file = $this->options->getRootDir() . "/lib/fonts/installed-fonts.dist.json";
+  116          $this->bundledFonts = json_decode(file_get_contents($file), true);
+
+vendor/dompdf/dompdf/src/Helpers.php:
+  714          if (!function_exists("imagecreatetruecolor")) {
+  715:             trigger_error("The PHP GD extension is required, but is not installed.", E_ERROR);
+  716              return false;
+
+vendor/dompdf/dompdf/src/Renderer/AbstractRenderer.php:
+  283          if (!function_exists("imagecreatetruecolor")) {
+  284:             throw new \Exception("The PHP GD extension is required, but is not installed.");
+  285          }
+
+vendor/ezyang/htmlpurifier/library/HTMLPurifier/ConfigSchema/schema/Core.EnableIDNA.txt:
+  6  Allows international domain names in URLs.  This configuration option
+  7: requires the PEAR Net_IDNA2 module to be installed.  It operates by
+  8  punycoding any internationalized host names for maximum portability.
+
+vendor/firebase/php-jwt/README.md:
+  19  Optionally, install the `paragonie/sodium_compat` package from composer if your
+  20: php is < 7.2 or does not have libsodium installed:
+  21  
+
+vendor/fzaninotto/faker/CHANGELOG.md:
+   34  - Enhancement: Clean up .gitattributes [\#1756](https://github.com/fzaninotto/Faker/pull/1756) ([localheinz](https://github.com/localheinz))
+   35: - Enhancement: Reference phpunit.xsd as installed with composer [\#1755](https://github.com/fzaninotto/Faker/pull/1755) ([localheinz](https://github.com/localheinz))
+   36  - add id\_ID Color [\#1754](https://github.com/fzaninotto/Faker/pull/1754) ([cacing69](https://github.com/cacing69))
+
+  321  - Fix: Do not pick a random float less than minimum [\#909](https://github.com/fzaninotto/Faker/pull/909) ([localheinz](https://github.com/localheinz))
+  322: - Fix: Prefer dependencies installed from dist [\#908](https://github.com/fzaninotto/Faker/pull/908) ([localheinz](https://github.com/localheinz))
+  323  - Add a building number with letter to German speaking locales. [\#903](https://github.com/fzaninotto/Faker/pull/903) ([markuspoerschke](https://github.com/markuspoerschke))
+
+vendor/fzaninotto/faker/readme.md:
+  63  <?php
+  64: # When installed via composer
+  65  require_once 'vendor/autoload.php';
+
+vendor/fzaninotto/faker/.github/workflows/continuous-integration.yml:
+   38  
+   39:       - name: "Cache dependencies installed with composer"
+   40          uses: "actions/cache@v1"
+
+   85  
+   86:       - name: "Cache dependencies installed with composer"
+   87          uses: "actions/cache@v1"
+
+  124  
+  125:       - name: "Cache dependencies installed with composer"
+  126          uses: "actions/cache@v1"
+
+vendor/google/apiclient/README.md:
+   41  [installation instructions](https://getcomposer.org/doc/00-intro.md) if you do not already have
+   42: composer installed.
+   43  
+   44: Once composer is installed, execute the following command in your project root to install this library:
+   45  
+
+  384  
+  385: When using [Refresh Tokens](https://developers.google.com/identity/protocols/OAuth2InstalledApp#offline) or [Service Account Credentials](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#overview), it may be useful to perform some action when a new access token is granted. To do this, pass a callable to the `setTokenCallback` method on the client:
+  386  
+
+vendor/google/apiclient/src/Client.php:
+  997  
+  998:         $key = isset($config['installed']) ? 'installed' : 'web';
+  999          if (isset($config['type']) && $config['type'] == 'service_account') {
+
+vendor/google/apiclient/src/AuthHandler/AuthHandlerFactory.php:
+  25      /**
+  26:      * Builds out a default http handler for the installed version of guzzle.
+  27       *
+
+vendor/google/apiclient-services/README.md:
+  14  This library is automatically updated daily with new API changes, and tagged weekly.
+  15: It is installed as part of the 
+  16  [Google API PHP Client](https://github.com/googleapis/google-api-php-client/releases)
+
+vendor/google/auth/src/ServiceAccountSignerTrait.php:
+  32       * @param bool $forceOpenssl Whether to use OpenSSL regardless of
+  33:      *        whether phpseclib is installed. **Defaults to** `false`.
+  34       * @return string
+
+  49              // @codeCoverageIgnoreStart
+  50:             throw new \RuntimeException('OpenSSL is not installed.');
+  51          }
+
+vendor/google/auth/src/HttpHandler/HttpHandlerFactory.php:
+  27      /**
+  28:      * Builds out a default http handler for the installed version of guzzle.
+  29       *
+
+vendor/guzzlehttp/guzzle/UPGRADING.md:
+  620    `GuzzleHttp\UriTemplate`. The Guzzle library will automatically use the PECL
+  621:   URI template library if it is installed.
+  622  - Url: URL parsing is now performed in `GuzzleHttp\Url::fromString` (previously
+
+vendor/guzzlehttp/psr7/CHANGELOG.md:
+  187  
+  188: - Issue when creating stream from `php://input` and curl-ext is not installed
+  189  - Broken `Utils::tryFopen()` on PHP 8
+
+vendor/intervention/image/src/Intervention/Image/ImageManager.php:
+  137              throw new MissingDependencyException(
+  138:                 "PHP Fileinfo extension must be installed/enabled to use Intervention Image."
+  139              );
+
+vendor/intervention/image/src/Intervention/Image/ImageServiceProviderLaravelRecent.php:
+   9      /**
+  10:      * Determines if Intervention Imagecache is installed
+  11       *
+
+  13       */
+  14:     private function cacheIsInstalled()
+  15      {
+
+  29  
+  30:         // setup intervention/imagecache if package is installed
+  31:         $this->cacheIsInstalled() ? $this->bootstrapImageCache() : null;
+  32      }
+
+vendor/laravel/framework/CHANGELOG.md:
+  158  * [10.x] Revert parameter name change by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/framework/pull/49659
+  159: * [10.x] Printing Name of The Method that Calls `ensureIntlExtensionIsInstalled` in `Number` class. by [@devajmeireles](https://github.com/devajmeireles) in https://github.com/laravel/framework/pull/49660
+  160  * [10.x] Update pagination tailwind.blade.php by [@anasmorahhib](https://github.com/anasmorahhib) in https://github.com/laravel/framework/pull/49665
+
+vendor/laravel/framework/src/Illuminate/Database/Connection.php:
+  1241      /**
+  1242:      * Indicates whether native alter operations will be used when dropping, renaming, or modifying columns, even if Doctrine DBAL is installed.
+  1243       *
+
+vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php:
+  118      /**
+  119:      * Attempt to use native schema operations for dropping, renaming, and modifying columns, even if Doctrine DBAL is installed.
+  120       *
+
+vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php:
+  122  
+  123:         if ($this->files->exists($path = $this->vendorPath.'/composer/installed.json')) {
+  124:             $installed = json_decode($this->files->get($path), true);
+  125  
+  126:             $packages = $installed['packages'] ?? $installed;
+  127          }
+
+vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:
+  638                      window.$RefreshSig$ = () => (type) => type
+  639:                     window.__vite_plugin_react_preamble_installed__ = true
+  640                  </script>
+
+vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php:
+  10  // built-in PHP web server. This provides a convenient way to test a Laravel
+  11: // application without having installed a "real" web server software here.
+  12  if ($uri !== '/' && file_exists($publicPath.$uri)) {
+
+vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithRedis.php:
+  33          if (! extension_loaded('redis')) {
+  34:             $this->markTestSkipped('The redis extension is not installed. Please install the extension to enable '.__CLASS__);
+  35          }
+
+vendor/laravel/framework/src/Illuminate/Http/Testing/FileFactory.php:
+  76          if (! function_exists('imagecreatetruecolor')) {
+  77:             throw new LogicException('GD extension is not installed.');
+  78          }
+
+vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:
+  83                          ? 'Please remove or rename the Redis facade alias in your "app" configuration file in order to avoid collision with the PHP Redis extension.'
+  84:                         : 'Please make sure the PHP Redis extension is installed and enabled.'
+  85                  );
+
+vendor/laravel/framework/src/Illuminate/Support/Composer.php:
+  41      /**
+  42:      * Determine if the given Composer package is installed.
+  43       *
+
+vendor/laravel/framework/src/Illuminate/Support/Number.php:
+   30      {
+   31:         static::ensureIntlExtensionIsInstalled();
+   32  
+
+   54      {
+   55:         static::ensureIntlExtensionIsInstalled();
+   56  
+
+   78      {
+   79:         static::ensureIntlExtensionIsInstalled();
+   80  
+
+   96      {
+   97:         static::ensureIntlExtensionIsInstalled();
+   98  
+
+  119      {
+  120:         static::ensureIntlExtensionIsInstalled();
+  121  
+
+  262      /**
+  263:      * Ensure the "intl" PHP extension is installed.
+  264       *
+
+  266       */
+  267:     protected static function ensureIntlExtensionIsInstalled()
+  268      {
+
+vendor/laravel/passport/config/passport.php:
+  38      | By default, Passport uses auto-incrementing primary keys when assigning
+  39:     | IDs to clients. However, if Passport is installed using the provided
+  40      | --uuids switch, this will be set to "true" and UUIDs will be used.
+
+vendor/league/commonmark/src/Extension/Embed/Bridge/OscaroteroEmbedAdapter.php:
+  28              if (! \class_exists(EmbedLib::class)) {
+  29:                 throw new MissingDependencyException('The embed/embed package is not installed. Please install it with Composer to use this adapter.');
+  30              }
+
+vendor/league/uri/Uri.php:
+   477       *
+   478:      * @throws MissingFeature If ext/fileinfo is not installed
+   479       * @throws SyntaxError If the file does not exist or is not readable
+
+  1254       *
+  1255:      * @throws MissingFeature If ext/fileinfo is not installed
+  1256       * @throws SyntaxError If the file does not exist or is not readable
+
+vendor/littleredbutton/bigbluebutton-api-php/README.md:
+   67  - PHP 7.4 or above.
+   68: - curl library installed.
+   69: - mbstring library installed.
+   70: - xml library installed.
+   71  
+
+  321  
+  322: This transport requires the composer packages `psr/http-client`,  `psr/http-factory` and `psr/http-message` to be installed manually.
+  323  This almost will be done by requiring package(s) providing PSR-7, PSR-17 and PSR-18.
+
+  351  
+  352: Another alternative is to use [php-http/discovery](https://github.com/php-http/discovery) which will find a proper PSR-17 and PSR-18 implementation based on installed packages.
+  353  This is for example desirable if you are embedding this library in an own library-styled project which should not force any vendor.
+
+  451  
+  452: Before running the tests, please ensure that all development dependencies of this package are installed.
+  453  Depending on the version of composer you possibly need to run
+
+vendor/littleredbutton/bigbluebutton-api-php/src/Http/Transport/CurlTransport.php:
+  90          if (!\extension_loaded('curl')) {
+  91:             throw new RuntimeException('Curl PHP module is not installed or not enabled.');
+  92          }
+
+vendor/littleredbutton/bigbluebutton-api-php/src/Http/Transport/Bridge/SymfonyHttpClient/SymfonyHttpClientTransport.php:
+  92              throw new \LogicException(sprintf(
+  93:                 'Cannot create an instance of "%s" when Symfony HttpClient is not installed. '.
+  94                      'Either instantiate the class by yourself and pass a proper implementation or '.
+
+vendor/maatwebsite/excel/src/Cache/CacheManager.php:
+   4  
+   5: use Composer\InstalledVersions;
+   6  use Composer\Semver\VersionParser;
+
+  42      {
+  43:         if (!InstalledVersions::satisfies(new VersionParser, 'psr/simple-cache', '^3.0')) {
+  44              return new MemoryCacheDeprecated(
+
+  58      {
+  59:         if (!InstalledVersions::satisfies(new VersionParser, 'psr/simple-cache', '^3.0')) {
+  60              return new BatchCacheDeprecated(
+
+vendor/maennchen/zipstream-php/.phive/phars.xml:
+  2  <phive xmlns="https://phar.io/phive">
+  3:   <phar name="phpdocumentor" version="^3.3.1" installed="3.3.1" location="./tools/phpdocumentor" copy="false"/>
+  4  </phive>
+
+vendor/maennchen/zipstream-php/guides/index.rst:
+  32  (``Psr\Http\Message\StreamInterface``) or use a stream instead of a
+  33: ``resource`` as ``outputStream``, the following dependencies must be installed
+  34  as well:
+
+vendor/maennchen/zipstream-php/guides/Symfony.rst:
+  91  
+  92: For the above use case you will need to have installed
+  93  `aws/aws-sdk-php-symfony <https://github.com/aws/aws-sdk-php-symfony>`_ to
+
+vendor/masterminds/html5/README.md:
+  66  <?php
+  67: // Assuming you installed from Composer:
+  68  require "vendor/autoload.php";
+
+vendor/mercadopago/dx-php/README.md:
+  16  
+  17: 1. Download [Composer](https://getcomposer.org/doc/00-intro.md) if not already installed
+  18  
+
+  23  
+  24: That's it! Mercado Pago SDK has been successfully installed.
+  25  
+
+vendor/mercadopago/dx-php/img/demo.svg:
+  46      <svg id="screen" width="656" x="23" y="50" viewBox="0 0 656 408" preserveAspectRatio="xMidYMin meet">
+  47: ⟪ 63499 characters skipped ⟫="0">    &#9474;&#160;&#160; &#9500;&#9472;&#9472; autoload_static.php</text></g></defs><defs><g id="g97"><text class="foreground" textLength="208" x="0">    &#9474;&#160;&#160; &#9492;&#9472;&#9472; installed.json</text></g></defs><defs><g id="g98"><text class="foreground" textLength="128" x="0">    &#9500;&#9472;&#9472; doctrine</text></g></defs><defs><g id="g99"><text class="foreground" textLength="184" x="0">    &#9474;&#160;&#160; &#9500;&#9472;&#9472; annotations</text></g></defs><defs><g id="g100"><text class="foreground" textLength="136" x="0">    &#9474;&#160;&#160; &#9500;&#9472;&#9472; cache</text></g></defs><defs><g id="g101"><text class="foreground" textLength="184" x="0">    &#9474;&#160;&#160; &#9500;&#9472;&#9472; collections</text></g></defs><defs><g id="g102"><text class="foreground" textLength="144" x="0">    &#9474;&#160;&#160; &#9500;&#9472;&#9472; common</text></g></defs><defs><g id="g103"><text class="foreground" textLength="168" x="0">    &#9474;&#160;&#160; &#9500;&#9472;&#9472; inflector</text></g></defs><defs><g id="g104"><text class="foreground" textLength="136" x="0">    &#9474;&#160;&#160; &#9492;&#9472;&#9472; lexer</text></g></defs><defs><g id="g105"
+  48  </svg>
+
+vendor/monolog/monolog/src/Monolog/Handler/PHPConsoleHandler.php:
+  104          'password' => null, // string|null Protect PHP Console connection by password
+  105:         'enableSslOnlyMode' => false, // bool Force connection by SSL for clients with PHP Console installed
+  106          'ipMasks' => [], // array Set IP masks of clients that will be allowed to connect to PHP Console: array('192.168.*.*', '127.0.0.1')
+
+vendor/monolog/monolog/src/Monolog/Handler/ZendMonitorHandler.php:
+  33              throw new MissingExtensionException(
+  34:                 'You must have Zend Server installed with Zend Monitor enabled in order to use this handler'
+  35              );
+
+vendor/nwidart/laravel-modules/config/config.php:
+  264      | required parameter is 'class'.
+  265:     | The file activator will store the activation status in storage/installed_modules
+  266      */
+
+  270              'statuses-file' => base_path('modules_statuses.json'),
+  271:             'cache-key' => 'activator.installed',
+  272              'cache-lifetime' => 604800,
+
+vendor/nwidart/laravel-modules/src/Commands/InstallCommand.php:
+  127          return [
+  128:             ['name', InputArgument::OPTIONAL, 'The name of module will be installed.'],
+  129:             ['version', InputArgument::OPTIONAL, 'The version of module will be installed.'],
+  130          ];
+
+vendor/nwidart/laravel-modules/src/Process/Installer.php:
+  19      /**
+  20:      * The version of module being installed.
+  21       *
+
+vendor/nyholm/psr7/src/Factory/HttplugFactory.php:
+  14  if (!\interface_exists(MessageFactory::class)) {
+  15:     throw new \LogicException('You cannot use "Nyholm\Psr7\Factory\HttplugFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  16  }
+
+vendor/omnipay/common/UPGRADE.md:
+  3   - It is now possible to use `setAmountInteger(integer $value)` and `setMoney(Money $money)`
+  4:  - HTTPPlug is used. Guzzle will be installed when using `omnipay/omnipay`, otherwise you need to require your own implementation (see http://docs.php-http.org/en/latest/clients.html)
+  5   - The package is renamed from `omnipay/omnipay` to `league/omnipay` and no longer installs all gateways by default.
+
+vendor/omnipay/paypal/makedoc.sh:
+  29              if [ ! -f "$PHPDOC" ]; then
+  30:                 echo "Neither apigen nor phpdoc is installed in the path or locally, please install one of them"
+  31                  echo "see http://www.apigen.org/ or http://www.phpdoc.org/"
+
+vendor/omnipay/paypal/README.md:
+  13  
+  14: Omnipay is installed via [Composer](http://getcomposer.org/). To install, simply require `league/omnipay` and `omnipay/paypal` with Composer:
+  15  
+
+vendor/paragonie/sodium_compat/README.md:
+   16  
+   17: If you have the PHP extension installed, Sodium Compat will opportunistically
+   18  and transparently use the PHP extension instead of our implementation.
+
+  130  
+  131: If you're using PHP 5.3.0 or newer and do not have the PECL extension installed,
+  132  you can just use the [standard ext/sodium API features as-is](https://paragonie.com/book/pecl-libsodium)
+
+  152  The polyfill does not expose this API on PHP < 5.3, or if you have the PHP
+  153: extension installed already.
+  154  
+
+  348    
+  349:   If you have the PHP extension installed, sodium_compat
+  350    will use the native implementation to zero out the string provided. Otherwise
+
+  357    
+  358:   If ext/sodium or ext/libsodium is installed, these API methods will fallthrough
+  359    to the extension. Otherwise, our polyfill library will throw a `SodiumException`.
+
+vendor/paragonie/sodium_compat/src/Compat.php:
+     8   *
+     9:  * If the PHP extension for libsodium is installed, it will always use that
+    10   * instead of our implementations. You get better performance and stronger
+
+    12   *
+    13:  * However, if your users don't have the PHP extension installed, we offer a
+    14   * compatible interface here. It will give you the correct results as if the
+    15:  * PHP extension was installed. It won't be as fast, of course.
+    16   *
+
+   322          if (!is_callable('openssl_encrypt') || !is_callable('openssl_decrypt')) {
+   323:             // OpenSSL isn't installed
+   324              return false;
+
+   374          if (!is_callable('openssl_decrypt')) {
+   375:             throw new SodiumException('The OpenSSL extension is not installed, or openssl_decrypt() is not available');
+   376          }
+
+   432          if (!is_callable('openssl_encrypt')) {
+   433:             throw new SodiumException('The OpenSSL extension is not installed, or openssl_encrypt() is not available');
+   434          }
+
+  3369       * @return void
+  3370:      * @throws SodiumException (Unless libsodium is installed)
+  3371       * @throws TypeError
+
+  3393              'This is not implemented in sodium_compat, as it is not possible to securely wipe memory from PHP. ' .
+  3394:             'To fix this error, make sure libsodium is installed and the PHP extension is enabled.'
+  3395          );
+
+  3969          if ($res === false) {
+  3970:             // No libsodium installed
+  3971              return false;
+
+vendor/phenx/php-svg-lib/src/Svg/Surface/CPdf.php:
+  5508          if (!function_exists("imagepng")) {
+  5509:             throw new \Exception("The PHP GD extension is required, but is not installed.");
+  5510          }
+
+  5756          if (!function_exists("imagecreatefrompng")) {
+  5757:             throw new \Exception("The PHP GD extension is required, but is not installed.");
+  5758          }
+
+vendor/php-http/discovery/CHANGELOG.md:
+   54  - [#208](https://github.com/php-http/discovery/pull/208) - Add composer plugin to auto-install missing implementations.
+   55:   When libraries require an http implementation but no packages providing that implementation is installed in the application, the plugin will automatically install one.
+   56    This is only done for libraries that directly require php-http/discovery to avoid unexpected dependency installation.
+
+   63  
+   64: - [#202](https://github.com/php-http/discovery/pull/202) - Avoid error when the Symfony PSR-18 client exists but its dependencies are not installed
+   65  
+
+  267  
+  268: - Puli composer plugin must be installed separately
+  269  
+
+vendor/php-http/discovery/composer.json:
+  48              "vendor/bin/phpspec run",
+  49:             "vendor/bin/simple-phpunit --group NothingInstalled"
+  50          ],
+
+vendor/php-http/discovery/README.md:
+  37  Then, you can disable the Composer plugin embeded in `php-http/discovery`
+  38: because you just installed the dev dependencies you need for testing:
+  39  
+
+  64  Internally, this code will use whatever PSR-7, PSR-17 and PSR-18 implementations
+  65: that your users have installed.
+  66  
+
+vendor/php-http/discovery/src/Composer/Plugin.php:
+   16  use Composer\Plugin\PluginInterface;
+   17: use Composer\Repository\InstalledRepositoryInterface;
+   18  use Composer\Repository\RepositorySet;
+
+   28   * virtual packages, this plugin will auto-install a well-known implementation if none is
+   29:  * found. The plugin will first look at already installed packages and figure out the
+   30   * preferred implementation to install based on the below stickyness rules (or on the first
+
+   89       * Describes which package should be preferred on the left side
+   90:      * depending on which one is already installed on the right side.
+   91       */
+
+  242  
+  243:     public function getMissingRequires(InstalledRepositoryInterface $repo, array $requires, bool $isProject, array $pinnedAbstractions): array
+  244      {
+
+vendor/php-http/discovery/src/Strategy/CommonClassesStrategy.php:
+   73          HttpAsyncClient::class => [
+   74:             ['class' => SymfonyHttplug::class, 'condition' => [SymfonyHttplug::class, Promise::class, [self::class, 'isPsr17FactoryInstalled']]],
+   75              ['class' => Guzzle7::class, 'condition' => Guzzle7::class],
+
+   80          HttpClient::class => [
+   81:             ['class' => SymfonyHttplug::class, 'condition' => [SymfonyHttplug::class, [self::class, 'isPsr17FactoryInstalled'], [self::class, 'isSymfonyImplementingHttpClient']]],
+   82              ['class' => Guzzle7::class, 'condition' => Guzzle7::class],
+
+  170       */
+  171:     public static function isPsr17FactoryInstalled()
+  172      {
+
+vendor/php-http/message/src/MessageFactory/DiactorosMessageFactory.php:
+  12  if (!interface_exists(MessageFactory::class)) {
+  13:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\DiactorosMessageFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  14  }
+
+vendor/php-http/message/src/MessageFactory/GuzzleMessageFactory.php:
+   9  if (!interface_exists(MessageFactory::class)) {
+  10:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\GuzzleMessageFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  11  }
+
+vendor/php-http/message/src/MessageFactory/SlimMessageFactory.php:
+  12  if (!interface_exists(MessageFactory::class)) {
+  13:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\SlimMessageFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  14  }
+
+vendor/php-http/message/src/StreamFactory/DiactorosStreamFactory.php:
+  10  if (!interface_exists(StreamFactory::class)) {
+  11:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\DiactorosStreamFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  12  }
+
+vendor/php-http/message/src/StreamFactory/GuzzleStreamFactory.php:
+  8  if (!interface_exists(StreamFactory::class)) {
+  9:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\GuzzleStreamFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  10  }
+
+vendor/php-http/message/src/StreamFactory/SlimStreamFactory.php:
+   9  if (!interface_exists(StreamFactory::class)) {
+  10:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\SlimStreamFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  11  }
+
+vendor/php-http/message/src/UriFactory/DiactorosUriFactory.php:
+  10  if (!interface_exists(UriFactory::class)) {
+  11:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\DiactorosUriFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  12  }
+
+vendor/php-http/message/src/UriFactory/GuzzleUriFactory.php:
+  10  if (!interface_exists(UriFactory::class)) {
+  11:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\GuzzleUriFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  12  }
+
+vendor/php-http/message/src/UriFactory/SlimUriFactory.php:
+   9  if (!interface_exists(UriFactory::class)) {
+  10:     throw new \LogicException('You cannot use "Http\Message\MessageFactory\SlimUriFactory" as the "php-http/message-factory" package is not installed. Try running "composer require php-http/message-factory". Note that this package is deprecated, use "psr/http-factory" instead');
+  11  }
+
+vendor/phpmailer/phpmailer/get_oauth_token.php:
+  25   * e.g.: http://localhost/phpmailer/get_oauth_token.php
+  26:  * * Ensure dependencies are installed with 'composer install'
+  27   * * Set up an app in your Google/Yahoo/Microsoft account
+
+vendor/phpmailer/phpmailer/README.md:
+  164  
+  165: You can generate complete API-level documentation by running `phpdoc` in the top-level folder, and documentation will appear in the `docs` folder, though you'll need to have [PHPDocumentor](http://www.phpdoc.org) installed. You may find [the unit tests](https://github.com/PHPMailer/PHPMailer/blob/master/test/PHPMailerTest.php) a good reference for how to do various operations such as encryption.
+  166  
+
+vendor/phpseclib/phpseclib/README.md:
+  78  
+  79: 2. Ensure you have Composer installed (see [Composer Download Instructions](https://getcomposer.org/download/))
+  80  
+
+vendor/phpseclib/phpseclib/phpseclib/Crypt/RSA.php:
+  245       * ignored (ie. multi-prime RSA support is more intended as a way to speed up RSA key generation when there's
+  246:      * a chance neither gmp nor OpenSSL are installed)
+  247       *
+
+vendor/predis/predis/src/Command/Argument/Search/CreateArguments.php:
+  27      /**
+  28:      * Specify data type for given index. To index JSON you must have the RedisJSON module to be installed.
+  29       *
+
+vendor/psy/psysh/bin/psysh:
+  112  // Keep this PHP 5.3 and 5.4 code around for a while in case someone is using a
+  113: // globally installed psysh as a bin launcher for older local versions.
+  114  if (version_compare(PHP_VERSION, '5.3.6', '<')) {
+
+vendor/psy/psysh/src/ExecutionLoop/RunkitReloader.php:
+  28      /**
+  29:      * Only enabled if Runkit is installed.
+  30       */
+
+vendor/psy/psysh/src/VersionUpdater/Installer.php:
+  42      /**
+  43:      * Verify the currently installed PsySH phar is writable so it can be replaced.
+  44       */
+
+  73      /**
+  74:      * Extract the "psysh" phar from the archive and move it, replacing the currently installed phar.
+  75       *
+
+  98      /**
+  99:      * Create a backup of the currently installed PsySH phar in the temporary directory with a version number postfix.
+  100       *
+
+vendor/psy/psysh/src/VersionUpdater/SelfUpdate.php:
+   21   *
+   22:  * If a new version is available, this command will download it and replace the currently installed version
+   23   */
+
+  113          if (!$this->installer->isInstallLocationWritable()) {
+  114:             $output->writeln('<error>Installed version is not writable.</error>');
+  115  
+
+vendor/pusher/pusher-php-server/src/Pusher.php:
+  172          if (!extension_loaded('json')) {
+  173:             throw new PusherException('The Pusher library requires the PHP JSON module. Please ensure it is installed');
+  174          }
+
+vendor/pusher/pusher-php-server/src/PusherCrypto.php:
+  61          if (!function_exists('sodium_crypto_secretbox')) {
+  62:             throw new PusherException('To use end to end encryption, you must either be using PHP 7.2 or greater or have installed the libsodium-php extension for php < 7.2.');
+  63          }
+
+vendor/sabberworm/php-css-parser/CHANGELOG.md:
+  182  
+  183: * Make default settings’ multibyte parsing option dependent on whether or not the mbstring extension is actually installed.
+  184  * *No backwards-incompatible changes*
+
+vendor/spondonit/laravel-fcm-notification/README.md:
+  15  
+  16: This package can be installed through Composer.
+  17  
+
+vendor/spondonit/school-service/src/Controllers/InstallController.php:
+  33      public function user(){
+  34:         $ac = Storage::exists('.temp_app_installed') ? Storage::get('.temp_app_installed') : null;
+  35  
+
+vendor/spondonit/school-service/src/Middleware/SchoolService.php:
+  39  
+  40:        $temp = Storage::exists('.temp_app_installed') ? Storage::get('.temp_app_installed') : false;
+  41          
+
+  50                  Storage::delete(['.access_code', '.account_email']);
+  51:                 Storage::put('.app_installed', '');
+  52              }
+
+  54  
+  55:         $c = Storage::exists('.app_installed') ? Storage::get('.app_installed') : false;
+  56          if (!$c) {
+
+vendor/spondonit/service/resources/lang/en/install.php:
+  72  "purchase_code" => 'Purchase Code',
+  73: "installed_domain" => "Installation domain",
+  74  "error" => 'Something Wrong',
+
+vendor/spondonit/service/resources/views/install/license.blade.php:
+  29                          <div class="form-group">
+  30:                             <label class="required" for="installed_domain">{{ __('service::install.installed_domain') }}</label>
+  31:                             <input type="text" class="form-control" name="installed_domain" id="installed_domain" required="required" readonly value="{{ app_url() }}" >
+  32                          </div>
+
+vendor/spondonit/service/resources/views/update/index.blade.php:
+  19                                      <tr>
+  20:                                         <td>Current Installed Version</td>
+  21                                          <td>{{ gv($product, 'current_version') }}</td>
+
+  87                                      <tr>
+  88:                                         <td>Current Installed Version</td>
+  89                                          <td>{{ gv($product, 'current_version') }}</td>
+
+vendor/spondonit/service/src/SpondonItServiceProvider.php:
+  19      {
+  20:         App::macro('isInstalled',function (){
+  21:             return  Storage::exists('.app_installed') &&  Storage::get('.app_installed');
+  22          });
+
+vendor/spondonit/service/src/Controllers/CheckController.php:
+   41                  Storage::deleteDirectory(config('app.item'));
+   42:                 Storage::put('.app_installed', '');
+   43                  Storage::put('.logout', 'true');
+
+   96              if (gbv($params, 'ri')) {
+   97:                 Storage::put('.app_installed', $checksum);
+   98                  Storage::put('.install_count', Storage::get('.install_count') + 1);
+
+  101              } else {
+  102:                 Storage::put('.temp_app_installed', $checksum ?? '');
+  103                  $goto = route('service.database');
+
+vendor/spondonit/service/src/Controllers/InstallController.php:
+  34  
+  35:         $ac = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+  36          if($ac){
+
+  56  
+  57:         $ac = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+  58          if($ac){
+
+  76              if (request('re_install') && $this->repo->checkReinstall()){
+  77:                 Storage::put('.app_installed', Storage::get('.temp_app_installed'));
+  78:                 Storage::delete('.temp_app_installed');
+  79                  Storage::put('.install_count', Storage::get('.install_count') + 1);
+
+  89  
+  90:         $ac = Storage::exists('.temp_app_installed') ? Storage::get('.temp_app_installed') : null;
+  91          if(!$ac){
+
+vendor/spondonit/service/src/Controllers/LicenseController.php:
+  28  
+  29:         $ac = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+  30          if(!$ac){
+
+  43  
+  44:         $ac = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+  45          if(!$ac){
+
+  59  
+  60:         $ac = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+  61          if(!$ac){
+
+vendor/spondonit/service/src/Repositories/InitRepository.php:
+   34              } else if($error == 1045){
+   35:                 $c = Storage::exists('.app_installed') && Storage::get('.app_installed');
+   36                  if($c){
+
+   59          $e = Storage::exists('.account_email') ? Storage::get('.account_email') : null;
+   60:         $c = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+   61          $v = Storage::exists('.version') ? Storage::get('.version') : null;
+
+   78                  Storage::deleteDirectory(config('app.item'));
+   79:                 Storage::put('.app_installed', '');
+   80                  Auth::logout();
+
+   90          $e = Storage::exists('.account_email') ? Storage::get('.account_email') : null;
+   91:         $c = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+   92          $v = Storage::exists('.version') ? Storage::get('.version') : null;
+
+  121          $e = Storage::exists('.account_email') ? Storage::get('.account_email') : null;
+  122:         $c = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+  123          $v = Storage::exists('.version') ? Storage::get('.version') : null;
+
+vendor/spondonit/service/src/Repositories/InstallRepository.php:
+   31      {
+   32:         $ac = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+   33          if ($ac) {
+
+  107          $server[] = $this->check(extension_loaded('zip'), 'Zip archive PHP extension enabled.', 'Install and enable Zip archive extension.', true);
+  108:         $server[] = $this->check(class_exists('finfo'), 'Finfo is installed.', 'Install Finfo (mandatory for read or write file).', true);
+  109:         $server[] = $this->check(class_exists('PDO'), 'PDO is installed.', 'Install PDO (mandatory for Eloquent).', true);
+  110:         $server[] = $this->check(extension_loaded('curl'), 'CURL is installed.', 'Install and enable CURL.', true);
+  111          $server[] = $this->check(ini_get('allow_url_fopen'), 'allow_url_fopen is on.', 'Turn on allow_url_fopen.', true);
+
+  312  
+  313:         Storage::put('.temp_app_installed', $checksum ?? '');
+  314          Storage::put('.access_code', $license_code ?? '');
+
+  346          $e = Storage::exists('.account_email') ? Storage::get('.account_email') : null;
+  347:         $c = Storage::exists('.temp_app_installed') ? Storage::get('.temp_app_installed') : null;
+  348          $v = Storage::exists('.version') ? Storage::get('.version') : null;
+
+  359              Storage::deleteDirectory(config('app.item'));
+  360:             Storage::put('.temp_app_installed', '');
+  361              return false;
+
+  375          if ($this->migrateDB()) {
+  376:             $ac = Storage::exists('.temp_app_installed') ? Storage::get('.temp_app_installed') : null;
+  377:             Storage::put('.app_installed', $ac);
+  378              Storage::put('.user_email', gv($params, 'email'));
+
+  380  
+  381:             Storage::delete('.temp_app_installed');
+  382          } else {
+
+  556              $s->update_url = $url;
+  557:             $s->installed_domain = app_url();
+  558              $s->activated_date = date('Y-m-d');
+
+  639              Storage::delete(['.access_code', '.account_email']);
+  640:             Storage::put('.app_installed', '');
+  641              Artisan::call('optimize:clear');
+
+  674                  'email' => $e,
+  675:                 'installed_domain' => app_url(),
+  676                  'activated_date' => date('Y-m-d'),
+
+vendor/spondonit/service/src/Repositories/LicenseRepository.php:
+   30          $e = Storage::exists('.account_email') ? Storage::get('.account_email') : null;
+   31:         $c = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+   32          $v = Storage::exists('.version') ? Storage::get('.version') : null;
+
+   50          Storage::delete(['.access_code', '.account_email']);
+   51:         Storage::put('.app_installed', '');
+   52  
+
+  139                  'email' => null,
+  140:                 'installed_domain' => null,
+  141                  'activated_date' => null,
+
+vendor/spondonit/service/src/Repositories/UpdateRepository.php:
+  44          $e = Storage::exists('.account_email') ? Storage::get('.account_email') : null;
+  45:         $c = Storage::exists('.app_installed') ? Storage::get('.app_installed') : null;
+  46          $v = Storage::exists('.version') ? Storage::get('.version') : null;
+
+vendor/stripe/stripe-php/.gitignore:
+  6  
+  7: # Ignore the SimpleTest library if it is installed to /test/.
+  8  /test/simpletest/
+
+vendor/symfony/console/Application.php:
+   124          if (!$this->signalRegistry) {
+   125:             throw new RuntimeException('Signals are not supported. Make sure that the "pcntl" extension is installed and that "pcntl_*" functions are not disabled by your php.ini\'s "disable_functions" directive.');
+   126          }
+
+  1017              if (!$this->signalRegistry) {
+  1018:                 throw new RuntimeException('Unable to subscribe to signal events. Make sure that the "pcntl" extension is installed and that "pcntl_*" functions are not disabled by your php.ini\'s "disable_functions" directive.');
+  1019              }
+
+vendor/symfony/console/Helper/ProcessHelper.php:
+  37          if (!class_exists(Process::class)) {
+  38:             throw new \LogicException('The ProcessHelper cannot be run as the Process component is not installed. Try running "compose require symfony/process".');
+  39          }
+
+vendor/symfony/error-handler/DebugClassLoader.php:
+   13  
+   14: use Composer\InstalledVersions;
+   15  use Doctrine\Common\Persistence\Proxy as LegacyProxy;
+
+  442                          && str_starts_with($className, 'Symfony\\')
+  443:                         && (!class_exists(InstalledVersions::class)
+  444:                             || 'symfony/symfony' !== InstalledVersions::getRootPackage()['name'])
+  445                      ) {
+
+vendor/symfony/error-handler/ErrorEnhancer/ClassNotFoundErrorEnhancer.php:
+  156          // Symfony may ship some polyfills, like "Normalizer". But if the Intl
+  157:         // extension is already installed, the next require_once will fail with
+  158          // a compile error because the class is already defined. And this one
+
+vendor/symfony/http-foundation/Request.php:
+  1940          // if either the class Locale doesn't exist, or an exception is thrown when
+  1941:         // setting the default locale, the intl module is not installed, and
+  1942          // the call can be ignored:
+
+vendor/symfony/http-foundation/File/File.php:
+  55          if (!class_exists(MimeTypes::class)) {
+  56:             throw new \LogicException('You cannot guess the extension as the Mime component is not installed. Try running "composer require symfony/mime".');
+  57          }
+
+  73          if (!class_exists(MimeTypes::class)) {
+  74:             throw new \LogicException('You cannot guess the mime type as the Mime component is not installed. Try running "composer require symfony/mime".');
+  75          }
+
+vendor/symfony/http-foundation/File/UploadedFile.php:
+  128          if (!class_exists(MimeTypes::class)) {
+  129:             throw new \LogicException('You cannot guess the extension as the Mime component is not installed. Try running "composer require symfony/mime".');
+  130          }
+
+vendor/symfony/http-kernel/HttpClientKernel.php:
+  38          if (null === $client && !class_exists(HttpClient::class)) {
+  39:             throw new \LogicException(sprintf('You cannot use "%s" as the HttpClient component is not installed. Try running "composer require symfony/http-client".', __CLASS__));
+  40          }
+
+  80          if (!class_exists(AbstractPart::class)) {
+  81:             throw new \LogicException('You cannot pass non-empty bodies as the Mime component is not installed. Try running "composer require symfony/mime".');
+  82          }
+
+vendor/symfony/http-kernel/DataCollector/TimeDataCollector.php:
+   33          $this->stopwatch = $stopwatch;
+   34:         $this->data = ['events' => [], 'stopwatch_installed' => false, 'start_time' => 0];
+   35      }
+
+   48              'events' => [],
+   49:             'stopwatch_installed' => class_exists(Stopwatch::class, false),
+   50          ];
+
+   54      {
+   55:         $this->data = ['events' => [], 'stopwatch_installed' => false, 'start_time' => 0];
+   56  
+
+  120  
+  121:     public function isStopwatchInstalled(): bool
+  122      {
+  123:         return $this->data['stopwatch_installed'];
+  124      }
+
+vendor/symfony/http-kernel/EventListener/CacheAttributeListener.php:
+  184              ? new ExpressionLanguage()
+  185:             : throw new \LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed. Try running "composer require symfony/expression-language".');
+  186      }
+
+vendor/symfony/mailer/Exception/UnsupportedSchemeException.php:
+  88          if ($package && !class_exists($package['class'])) {
+  89:             parent::__construct(sprintf('Unable to send emails via "%s" as the bridge is not installed. Try running "composer require %s".', $provider, $package['package']));
+  90  
+
+vendor/symfony/mailer/Transport/AbstractHttpTransport.php:
+  35              if (!class_exists(HttpClient::class)) {
+  36:                 throw new \LogicException(sprintf('You cannot use "%s" as the HttpClient component is not installed. Try running "composer require symfony/http-client".', __CLASS__));
+  37              }
+
+vendor/symfony/process/Process.php:
+  141       *
+  142:      * @throws LogicException When proc_open is not installed
+  143       */
+
+  187       *
+  188:      * @throws LogicException When proc_open is not installed
+  189       */
+
+vendor/symfony/routing/Matcher/UrlMatcher.php:
+  264              if (!class_exists(ExpressionLanguage::class)) {
+  265:                 throw new \LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed. Try running "composer require symfony/expression-language".');
+  266              }
+
+vendor/symfony/routing/Matcher/Dumper/CompiledUrlMatcherDumper.php:
+  449              if (!class_exists(ExpressionLanguage::class)) {
+  450:                 throw new \LogicException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed. Try running "composer require symfony/expression-language".');
+  451              }
+
+vendor/symfony/string/Slugger/AsciiSlugger.php:
+  19  if (!interface_exists(LocaleAwareInterface::class)) {
+  20:     throw new \LogicException('You cannot use the "Symfony\Component\String\Slugger\AsciiSlugger" as the "symfony/translation-contracts" package is not installed. Try running "composer require symfony/translation-contracts".');
+  21  }
+
+  94          if (false !== $emoji && !class_exists(EmojiTransliterator::class)) {
+  95:             throw new \LogicException(sprintf('You cannot use the "%s()" method as the "symfony/intl" package is not installed. Try running "composer require symfony/intl".', __METHOD__));
+  96          }
+
+vendor/symfony/translation/CHANGELOG.md:
+  24   * Deprecate `PhpExtractor` in favor of `PhpAstExtractor`
+  25:  * Add `PhpAstExtractor` (requires [nikic/php-parser](https://github.com/nikic/php-parser) to be installed)
+  26  
+
+vendor/symfony/translation/Exception/UnsupportedSchemeException.php:
+  45          if ($package && !class_exists($package['class'])) {
+  46:             parent::__construct(sprintf('Unable to synchronize translations via "%s" as the provider is not installed. Try running "composer require %s".', $provider, $package['package']));
+  47  
+
+vendor/symfony/translation/Extractor/PhpAstExtractor.php:
+  38          if (!class_exists(ParserFactory::class)) {
+  39:             throw new \LogicException(sprintf('You cannot use "%s" as the "nikic/php-parser" package is not installed. Try running "composer require nikic/php-parser".', static::class));
+  40          }
+
+  79          if (!class_exists(Finder::class)) {
+  80:             throw new \LogicException(sprintf('You cannot use "%s" as the "symfony/finder" package is not installed. Try running "composer require symfony/finder".', static::class));
+  81          }
+
+vendor/symfony/translation/Extractor/PhpExtractor.php:
+  325          if (!class_exists(Finder::class)) {
+  326:             throw new \LogicException(sprintf('You cannot use "%s" as the "symfony/finder" package is not installed. Try running "composer require symfony/finder".', static::class));
+  327          }
+
+vendor/symfony/var-dumper/Caster/LinkStub.php:
+  71                      $v = \dirname($r->getFileName(), 2);
+  72:                     if (is_file($v.'/composer/installed.json')) {
+  73                          self::$vendorRoots[] = $v.\DIRECTORY_SEPARATOR;
+
+vendor/tightenco/collect/upgrade.sh:
+  64          if ! [ -x "$(command -v ${dependency})" ]; then
+  65:             echo "Error: ${dependency} is not installed." >&2
+  66              exit 1
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview.php:
+   37   * @property \Twilio\Rest\Preview\Marketplace\AvailableAddOnList $availableAddOns
+   38:  * @property \Twilio\Rest\Preview\Marketplace\InstalledAddOnList $installedAddOns
+   39   * @property \Twilio\Rest\Preview\Sync\ServiceList $services
+
+   55   * @method \Twilio\Rest\Preview\Marketplace\AvailableAddOnContext availableAddOns(string $sid)
+   56:  * @method \Twilio\Rest\Preview\Marketplace\InstalledAddOnContext installedAddOns(string $sid)
+   57   * @method \Twilio\Rest\Preview\Sync\ServiceContext services(string $sid)
+
+  293      /**
+  294:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnList
+  295       */
+  296:     protected function getInstalledAddOns() {
+  297:         return $this->marketplace->installedAddOns;
+  298      }
+
+  300      /**
+  301:      * @param string $sid The SID of the InstalledAddOn resource to fetch
+  302:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnContext
+  303       */
+  304:     protected function contextInstalledAddOns($sid) {
+  305:         return $this->marketplace->installedAddOns($sid);
+  306      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Api/V2010/Account/IncomingPhoneNumber/AssignedAddOnContext.php:
+  32       *                           to fetch
+  33:      * @param string $resourceSid The SID of the Phone Number that installed this
+  34       *                            Add-on
+
+vendor/twilio/sdk/src/Twilio/Rest/Api/V2010/Account/IncomingPhoneNumber/AssignedAddOnInstance.php:
+  41       * @param string $accountSid The SID of the Account that created the resource
+  42:      * @param string $resourceSid The SID of the Phone Number that installed this
+  43       *                            Add-on
+
+vendor/twilio/sdk/src/Twilio/Rest/Api/V2010/Account/IncomingPhoneNumber/AssignedAddOnList.php:
+   25       * @param string $accountSid The SID of the Account that created the resource
+   26:      * @param string $resourceSid The SID of the Phone Number that installed this
+   27       *                            Add-on
+
+  127       *
+  128:      * @param string $installedAddOnSid The SID that identifies the Add-on
+  129       *                                  installation
+
+  132       */
+  133:     public function create($installedAddOnSid) {
+  134:         $data = Values::of(array('InstalledAddOnSid' => $installedAddOnSid, ));
+  135  
+
+vendor/twilio/sdk/src/Twilio/Rest/Lookups/V1/PhoneNumberOptions.php:
+  66      /**
+  67:      * The `unique_name` of an Add-on you would like to invoke. Can be the `unique_name` of an Add-on that is installed on your account. You can specify multiple instances of this parameter to invoke multiple Add-ons. For more information about  Add-ons, see the [Add-ons documentation](https://www.twilio.com/docs/add-ons).
+  68       *
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace.php:
+  14  use Twilio\Rest\Preview\Marketplace\AvailableAddOnList;
+  15: use Twilio\Rest\Preview\Marketplace\InstalledAddOnList;
+  16  use Twilio\Version;
+
+  19   * @property \Twilio\Rest\Preview\Marketplace\AvailableAddOnList $availableAddOns
+  20:  * @property \Twilio\Rest\Preview\Marketplace\InstalledAddOnList $installedAddOns
+  21   * @method \Twilio\Rest\Preview\Marketplace\AvailableAddOnContext availableAddOns(string $sid)
+  22:  * @method \Twilio\Rest\Preview\Marketplace\InstalledAddOnContext installedAddOns(string $sid)
+  23   */
+
+  25      protected $_availableAddOns = null;
+  26:     protected $_installedAddOns = null;
+  27  
+
+  49      /**
+  50:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnList
+  51       */
+  52:     protected function getInstalledAddOns() {
+  53:         if (!$this->_installedAddOns) {
+  54:             $this->_installedAddOns = new InstalledAddOnList($this);
+  55          }
+  56:         return $this->_installedAddOns;
+  57      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnContext.php:
+   14  use Twilio\Options;
+   15: use Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionList;
+   16  use Twilio\Serialize;
+
+   22   *
+   23:  * @property \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionList $extensions
+   24:  * @method \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionContext extensions(string $sid)
+   25   */
+   26: class InstalledAddOnContext extends InstanceContext {
+   27      protected $_extensions = null;
+
+   29      /**
+   30:      * Initialize the InstalledAddOnContext
+   31       *
+   32       * @param \Twilio\Version $version Version that contains the resource
+   33:      * @param string $sid The SID of the InstalledAddOn resource to fetch
+   34:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnContext
+   35       */
+
+   41  
+   42:         $this->uri = '/InstalledAddOns/' . \rawurlencode($sid) . '';
+   43      }
+
+   45      /**
+   46:      * Deletes the InstalledAddOnInstance
+   47       *
+
+   55      /**
+   56:      * Fetch a InstalledAddOnInstance
+   57       *
+   58:      * @return InstalledAddOnInstance Fetched InstalledAddOnInstance
+   59       * @throws TwilioException When an HTTP error occurs.
+
+   69  
+   70:         return new InstalledAddOnInstance($this->version, $payload, $this->solution['sid']);
+   71      }
+
+   73      /**
+   74:      * Update the InstalledAddOnInstance
+   75       *
+   76       * @param array|Options $options Optional Arguments
+   77:      * @return InstalledAddOnInstance Updated InstalledAddOnInstance
+   78       * @throws TwilioException When an HTTP error occurs.
+
+   94  
+   95:         return new InstalledAddOnInstance($this->version, $payload, $this->solution['sid']);
+   96      }
+
+  100       *
+  101:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionList
+  102       */
+
+  104          if (!$this->_extensions) {
+  105:             $this->_extensions = new InstalledAddOnExtensionList($this->version, $this->solution['sid']);
+  106          }
+
+  153          }
+  154:         return '[Twilio.Preview.Marketplace.InstalledAddOnContext ' . \implode(' ', $context) . ']';
+  155      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnInstance.php:
+   32   */
+   33: class InstalledAddOnInstance extends InstanceResource {
+   34      protected $_extensions = null;
+
+   36      /**
+   37:      * Initialize the InstalledAddOnInstance
+   38       *
+
+   40       * @param mixed[] $payload The response payload
+   41:      * @param string $sid The SID of the InstalledAddOn resource to fetch
+   42:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnInstance
+   43       */
+
+   67       *
+   68:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnContext Context for
+   69       *                                                                this
+   70:      *                                                                InstalledAddOnInstance
+   71       */
+
+   73          if (!$this->context) {
+   74:             $this->context = new InstalledAddOnContext($this->version, $this->solution['sid']);
+   75          }
+
+   80      /**
+   81:      * Deletes the InstalledAddOnInstance
+   82       *
+
+   90      /**
+   91:      * Fetch a InstalledAddOnInstance
+   92       *
+   93:      * @return InstalledAddOnInstance Fetched InstalledAddOnInstance
+   94       * @throws TwilioException When an HTTP error occurs.
+
+  100      /**
+  101:      * Update the InstalledAddOnInstance
+  102       *
+  103       * @param array|Options $options Optional Arguments
+  104:      * @return InstalledAddOnInstance Updated InstalledAddOnInstance
+  105       * @throws TwilioException When an HTTP error occurs.
+
+  113       *
+  114:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionList
+  115       */
+
+  149          }
+  150:         return '[Twilio.Preview.Marketplace.InstalledAddOnInstance ' . \implode(' ', $context) . ']';
+  151      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnList.php:
+   21   */
+   22: class InstalledAddOnList extends ListResource {
+   23      /**
+   24:      * Construct the InstalledAddOnList
+   25       *
+   26       * @param Version $version Version that contains the resource
+   27:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnList
+   28       */
+
+   34  
+   35:         $this->uri = '/InstalledAddOns';
+   36      }
+
+   38      /**
+   39:      * Create a new InstalledAddOnInstance
+   40       *
+
+   43       * @param array|Options $options Optional Arguments
+   44:      * @return InstalledAddOnInstance Newly created InstalledAddOnInstance
+   45       * @throws TwilioException When an HTTP error occurs.
+
+   63  
+   64:         return new InstalledAddOnInstance($this->version, $payload);
+   65      }
+
+   67      /**
+   68:      * Streams InstalledAddOnInstance records from the API as a generator stream.
+   69       * This operation lazily loads records as efficiently as possible until the
+
+   93      /**
+   94:      * Reads InstalledAddOnInstance records from the API as a list.
+   95       * Unlike stream(), this operation is eager and will load `limit` records into
+
+  105       *                        efficient page size, i.e. min(limit, 1000)
+  106:      * @return InstalledAddOnInstance[] Array of results
+  107       */
+
+  112      /**
+  113:      * Retrieve a single page of InstalledAddOnInstance records from the API.
+  114       * Request is executed immediately
+
+  118       * @param mixed $pageNumber Page Number, this value is simply for client state
+  119:      * @return \Twilio\Page Page of InstalledAddOnInstance
+  120       */
+
+  133  
+  134:         return new InstalledAddOnPage($this->version, $response, $this->solution);
+  135      }
+
+  137      /**
+  138:      * Retrieve a specific page of InstalledAddOnInstance records from the API.
+  139       * Request is executed immediately
+
+  141       * @param string $targetUrl API-generated URL for the requested results page
+  142:      * @return \Twilio\Page Page of InstalledAddOnInstance
+  143       */
+
+  149  
+  150:         return new InstalledAddOnPage($this->version, $response, $this->solution);
+  151      }
+
+  153      /**
+  154:      * Constructs a InstalledAddOnContext
+  155       *
+  156:      * @param string $sid The SID of the InstalledAddOn resource to fetch
+  157:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOnContext
+  158       */
+  159      public function getContext($sid) {
+  160:         return new InstalledAddOnContext($this->version, $sid);
+  161      }
+
+  168      public function __toString() {
+  169:         return '[Twilio.Preview.Marketplace.InstalledAddOnList]';
+  170      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnOptions.php:
+   17   */
+   18: abstract class InstalledAddOnOptions {
+   19      /**
+
+   22       *                           identifies the resource
+   23:      * @return CreateInstalledAddOnOptions Options builder
+   24       */
+   25      public static function create($configuration = Values::NONE, $uniqueName = Values::NONE) {
+   26:         return new CreateInstalledAddOnOptions($configuration, $uniqueName);
+   27      }
+
+   32       *                           identifies the resource
+   33:      * @return UpdateInstalledAddOnOptions Options builder
+   34       */
+   35      public static function update($configuration = Values::NONE, $uniqueName = Values::NONE) {
+   36:         return new UpdateInstalledAddOnOptions($configuration, $uniqueName);
+   37      }
+
+   39  
+   40: class CreateInstalledAddOnOptions extends Options {
+   41      /**
+
+   51      /**
+   52:      * The JSON object that represents the configuration of the new Add-on being installed.
+   53       *
+
+   85          }
+   86:         return '[Twilio.Preview.Marketplace.CreateInstalledAddOnOptions ' . \implode(' ', $options) . ']';
+   87      }
+
+   89  
+   90: class UpdateInstalledAddOnOptions extends Options {
+   91      /**
+
+  135          }
+  136:         return '[Twilio.Preview.Marketplace.UpdateInstalledAddOnOptions ' . \implode(' ', $options) . ']';
+  137      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOnPage.php:
+  16   */
+  17: class InstalledAddOnPage extends Page {
+  18      public function __construct($version, $response, $solution) {
+
+  25      public function buildInstance(array $payload) {
+  26:         return new InstalledAddOnInstance($this->version, $payload);
+  27      }
+
+  34      public function __toString() {
+  35:         return '[Twilio.Preview.Marketplace.InstalledAddOnPage]';
+  36      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionContext.php:
+    9  
+   10: namespace Twilio\Rest\Preview\Marketplace\InstalledAddOn;
+   11  
+
+   20   */
+   21: class InstalledAddOnExtensionContext extends InstanceContext {
+   22      /**
+   23:      * Initialize the InstalledAddOnExtensionContext
+   24       *
+   25       * @param \Twilio\Version $version Version that contains the resource
+   26:      * @param string $installedAddOnSid The SID of the InstalledAddOn resource with
+   27       *                                  the extension to fetch
+   28:      * @param string $sid The SID of the InstalledAddOn Extension resource to fetch
+   29:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionContext
+   30       */
+   31:     public function __construct(Version $version, $installedAddOnSid, $sid) {
+   32          parent::__construct($version);
+
+   34          // Path Solution
+   35:         $this->solution = array('installedAddOnSid' => $installedAddOnSid, 'sid' => $sid, );
+   36  
+   37:         $this->uri = '/InstalledAddOns/' . \rawurlencode($installedAddOnSid) . '/Extensions/' . \rawurlencode($sid) . '';
+   38      }
+
+   40      /**
+   41:      * Fetch a InstalledAddOnExtensionInstance
+   42       *
+   43:      * @return InstalledAddOnExtensionInstance Fetched
+   44:      *                                         InstalledAddOnExtensionInstance
+   45       * @throws TwilioException When an HTTP error occurs.
+
+   55  
+   56:         return new InstalledAddOnExtensionInstance(
+   57              $this->version,
+   58              $payload,
+   59:             $this->solution['installedAddOnSid'],
+   60              $this->solution['sid']
+
+   64      /**
+   65:      * Update the InstalledAddOnExtensionInstance
+   66       *
+   67       * @param bool $enabled Whether the Extension should be invoked
+   68:      * @return InstalledAddOnExtensionInstance Updated
+   69:      *                                         InstalledAddOnExtensionInstance
+   70       * @throws TwilioException When an HTTP error occurs.
+
+   81  
+   82:         return new InstalledAddOnExtensionInstance(
+   83              $this->version,
+   84              $payload,
+   85:             $this->solution['installedAddOnSid'],
+   86              $this->solution['sid']
+
+   99          }
+  100:         return '[Twilio.Preview.Marketplace.InstalledAddOnExtensionContext ' . \implode(' ', $context) . ']';
+  101      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionInstance.php:
+    9  
+   10: namespace Twilio\Rest\Preview\Marketplace\InstalledAddOn;
+   11  
+
+   20   * @property string $sid
+   21:  * @property string $installedAddOnSid
+   22   * @property string $friendlyName
+
+   27   */
+   28: class InstalledAddOnExtensionInstance extends InstanceResource {
+   29      /**
+   30:      * Initialize the InstalledAddOnExtensionInstance
+   31       *
+
+   33       * @param mixed[] $payload The response payload
+   34:      * @param string $installedAddOnSid The SID of the InstalledAddOn resource to
+   35       *                                  which this extension applies
+   36:      * @param string $sid The SID of the InstalledAddOn Extension resource to fetch
+   37:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionInstance
+   38       */
+   39:     public function __construct(Version $version, array $payload, $installedAddOnSid, $sid = null) {
+   40          parent::__construct($version);
+
+   44              'sid' => Values::array_get($payload, 'sid'),
+   45:             'installedAddOnSid' => Values::array_get($payload, 'installed_add_on_sid'),
+   46              'friendlyName' => Values::array_get($payload, 'friendly_name'),
+
+   53          $this->solution = array(
+   54:             'installedAddOnSid' => $installedAddOnSid,
+   55              'sid' => $sid ?: $this->properties['sid'],
+
+   62       *
+   63:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionContext Context for this
+   64:      *                                                                                        InstalledAddOnExtensionInstance
+   65       */
+
+   67          if (!$this->context) {
+   68:             $this->context = new InstalledAddOnExtensionContext(
+   69                  $this->version,
+   70:                 $this->solution['installedAddOnSid'],
+   71                  $this->solution['sid']
+
+   78      /**
+   79:      * Fetch a InstalledAddOnExtensionInstance
+   80       *
+   81:      * @return InstalledAddOnExtensionInstance Fetched
+   82:      *                                         InstalledAddOnExtensionInstance
+   83       * @throws TwilioException When an HTTP error occurs.
+
+   89      /**
+   90:      * Update the InstalledAddOnExtensionInstance
+   91       *
+   92       * @param bool $enabled Whether the Extension should be invoked
+   93:      * @return InstalledAddOnExtensionInstance Updated
+   94:      *                                         InstalledAddOnExtensionInstance
+   95       * @throws TwilioException When an HTTP error occurs.
+
+  130          }
+  131:         return '[Twilio.Preview.Marketplace.InstalledAddOnExtensionInstance ' . \implode(' ', $context) . ']';
+  132      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionList.php:
+    9  
+   10: namespace Twilio\Rest\Preview\Marketplace\InstalledAddOn;
+   11  
+
+   18   */
+   19: class InstalledAddOnExtensionList extends ListResource {
+   20      /**
+   21:      * Construct the InstalledAddOnExtensionList
+   22       *
+   23       * @param Version $version Version that contains the resource
+   24:      * @param string $installedAddOnSid The SID of the InstalledAddOn resource to
+   25       *                                  which this extension applies
+   26:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionList
+   27       */
+   28:     public function __construct(Version $version, $installedAddOnSid) {
+   29          parent::__construct($version);
+
+   31          // Path Solution
+   32:         $this->solution = array('installedAddOnSid' => $installedAddOnSid, );
+   33  
+   34:         $this->uri = '/InstalledAddOns/' . \rawurlencode($installedAddOnSid) . '/Extensions';
+   35      }
+
+   37      /**
+   38:      * Streams InstalledAddOnExtensionInstance records from the API as a generator
+   39       * stream.
+
+   64      /**
+   65:      * Reads InstalledAddOnExtensionInstance records from the API as a list.
+   66       * Unlike stream(), this operation is eager and will load `limit` records into
+
+   76       *                        efficient page size, i.e. min(limit, 1000)
+   77:      * @return InstalledAddOnExtensionInstance[] Array of results
+   78       */
+
+   83      /**
+   84:      * Retrieve a single page of InstalledAddOnExtensionInstance records from the
+   85       * API.
+
+   90       * @param mixed $pageNumber Page Number, this value is simply for client state
+   91:      * @return \Twilio\Page Page of InstalledAddOnExtensionInstance
+   92       */
+
+  105  
+  106:         return new InstalledAddOnExtensionPage($this->version, $response, $this->solution);
+  107      }
+
+  109      /**
+  110:      * Retrieve a specific page of InstalledAddOnExtensionInstance records from the
+  111       * API.
+
+  114       * @param string $targetUrl API-generated URL for the requested results page
+  115:      * @return \Twilio\Page Page of InstalledAddOnExtensionInstance
+  116       */
+
+  122  
+  123:         return new InstalledAddOnExtensionPage($this->version, $response, $this->solution);
+  124      }
+
+  126      /**
+  127:      * Constructs a InstalledAddOnExtensionContext
+  128       *
+  129:      * @param string $sid The SID of the InstalledAddOn Extension resource to fetch
+  130:      * @return \Twilio\Rest\Preview\Marketplace\InstalledAddOn\InstalledAddOnExtensionContext
+  131       */
+  132      public function getContext($sid) {
+  133:         return new InstalledAddOnExtensionContext(
+  134              $this->version,
+  135:             $this->solution['installedAddOnSid'],
+  136              $sid
+
+  145      public function __toString() {
+  146:         return '[Twilio.Preview.Marketplace.InstalledAddOnExtensionList]';
+  147      }
+
+vendor/twilio/sdk/src/Twilio/Rest/Preview/Marketplace/InstalledAddOn/InstalledAddOnExtensionPage.php:
+   9  
+  10: namespace Twilio\Rest\Preview\Marketplace\InstalledAddOn;
+  11  
+
+  16   */
+  17: class InstalledAddOnExtensionPage extends Page {
+  18      public function __construct($version, $response, $solution) {
+
+  25      public function buildInstance(array $payload) {
+  26:         return new InstalledAddOnExtensionInstance(
+  27              $this->version,
+  28              $payload,
+  29:             $this->solution['installedAddOnSid']
+  30          );
+
+  38      public function __toString() {
+  39:         return '[Twilio.Preview.Marketplace.InstalledAddOnExtensionPage]';
+  40      }
+
+vendor/unicodeveloper/laravel-paystack/README.md:
+  30  
+  31: Once Laravel Paystack is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
+  32  
+
+vendor/vimeo/vimeo-api/README.md:
+  51  
+  52: Please note that this library requires at least PHP 7.1 installed. If you are on PHP 5.6, or PHP 7.0, please use install the package with the following:
+  53  
+
+vendor/xendit/xendit-php/README.md:
+  1871  
+  1872: Before you start to code, run this command to install all of the required packages. Make sure you have `composer` installed in your computer
+  1873  
+
+vendor/yajra/laravel-datatables-oracle/src/QueryDataTable.php:
+  1109          if (! class_exists('\Laravel\Scout\EngineManager')) {
+  1110:             throw new \Exception('Laravel Scout is not installed.');
+  1111          }
